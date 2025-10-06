@@ -1,12 +1,9 @@
 import Link from 'next/link'
-import { MdOutlineEmail } from "react-icons/md";
-import { LiaPhoneVolumeSolid } from "react-icons/lia";
-import { FaFacebook } from "react-icons/fa";
-import { IoLogoInstagram } from "react-icons/io5";
-import { BsWhatsapp } from "react-icons/bs";
+
 import React from 'react'
 import './header.css'
 import Image from 'next/image';
+import Topheader from '../topheader/topheader';
 const HeaderNavbar = () => {
 
     
@@ -14,51 +11,7 @@ const HeaderNavbar = () => {
         <>
 
         {/* top section */}
-            <div className="header-top">
-                <div className="outer-container">
-                    <div className="top-inner">
-                        {/* step1 */}
-                        <   div className="text">
-                            <p>Your health is our priority — we're here for you 24/7</p>
-                        </div>
-                        {/* step2 */}
-                        < div className="phone">
-                            < div className="contact-info">
-                                <ul className="social-links clearfix">
-                                    <li>
-                                        <MdOutlineEmail />
-
-                                        <a href="mailto:example@info.com">example@info.com</a>
-                                    </li>
-                                    <li>
-                                        <LiaPhoneVolumeSolid />
-                                        <a href="tel:+911234567890"> +911234567890 </a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                            <div className="social-info">
-                                <ul>
-                                    <li>
-                                        <h6>Follow Us</h6>
-                                    </li>
-                                    <li>
-                                        <Link href="/"><FaFacebook /></Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/"><IoLogoInstagram />
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/"><BsWhatsapp /></Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+         <Topheader/>
 
 {/* ..............................................................................................header */}
  <header className="header">

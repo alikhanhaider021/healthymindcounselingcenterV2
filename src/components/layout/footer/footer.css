@@ -2,8 +2,10 @@
 
 .footer {
   width: 100%;
-  background: #000;
+  /* background: #000; */
   color: #fff;
+  padding-top: 40px;
+  /* overflow: visible; */
 }
 
 /* Container */
@@ -11,239 +13,283 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+ 
+}
+.footer-emergency-signup-down {
+     transform: translatey(104px);
 }
 
 /* Footer Top Section */
 .footer-top {
-  background: linear-gradient(135deg, #0052CC 0%, #003D99 100%);
-  padding: 40px 0;
+        background: radial-gradient(circle, #1a213f 0, #0d419a 100%);
+    padding: 50px 50px 60px;
+    width: 60%;
+    border-radius: 20px;
+    margin: auto;
+       box-shadow: -10px 10px 70px 0 #55e6a54d;;
+  /* background: linear-gradient(135deg, #0052CC 0%, #003D99 100%); */
+  /* background: radial-gradient(circle, #31333c 0, #000 100%); */
+/* box-shadow: -10px 10px 70px 0 #55e6a54d; */
 }
-
-.footer-top-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-/* Emergency Call Box */
-.emergency-box {
-  position: relative;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+.reachout-section {
+  /* background-color: #f8f9fa;  */
+  /* light neutral background */
+  /* padding: 60px 30px; */
   border-radius: 12px;
-  padding: 40px;
-  overflow: hidden;
-}
-
-.emergency-content {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 24px;
-  position: relative;
-  z-index: 2;
+  gap: 30px;
+  flex-wrap: wrap; /* mobile responsive */
 }
 
-.phone-icon {
-  flex-shrink: 0;
-}
-
-.emergency-text h3 {
-  font-size: 28px;
-  font-weight: 700;
-  margin: 0 0 8px 0;
-  color: #fff;
-}
-
-.emergency-text .label {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0 0 4px 0;
-}
-
-.emergency-text .phone {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  margin: 0;
-}
-
-.emergency-icon-bg {
-  position: absolute;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-/* Email Signup Box */
-.signup-box {
-  text-align: center;
-}
-
-.signup-box h3 {
-  font-size: 32px;
-  font-weight: 700;
-  margin: 0 0 24px 0;
-  color: #fff;
-}
-
-.signup-form {
-  display: flex;
-  gap: 12px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.signup-form input {
+/* Left text section */
+.reachout-section .text-start {
   flex: 1;
-  padding: 16px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  outline: none;
-  transition: all 0.3s ease;
+  min-width: 280px;
 }
 
-.signup-form input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.signup-form input:focus {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.signup-form button {
-  padding: 16px 32px;
-  background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
+.reachout-section h5 {
+  font-size: 1.5rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
+  color: white;
+  margin-bottom: 15px;
 }
 
-.signup-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.4);
+.reachout-section p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 0;
 }
 
-/* Main Footer Content */
-.footer-main {
-  background: #000;
-  padding: 60px 0 40px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-  gap: 40px;
-}
-
-.footer-column h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 20px 0;
-  color: #fff;
-}
-
-.footer-column p {
-  font-size: 14px;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0 0 24px 0;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 12px;
-}
-
-.footer-column ul li a {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.footer-column ul li a:hover {
-  color: #0052CC;
-  padding-left: 5px;
-}
-
-/* Social Links */
-.social-links {
-  display: flex;
-  gap: 12px;
-}
-
-.social-links a {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
+/* Button styling */
+.reachout-section button {
+  background-color: white;
+  color: black;
+  border: none;
   border-radius: 8px;
-  color: #fff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 500;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.social-links a:hover {
-  background: #0052CC;
+.reachout-section button:hover {
+  background-color: white;
+box-shadow: -10px 10px 70px 0 #21ad6e4d;
+
   transform: translateY(-3px);
 }
 
-/* Contact Info */
-.contact-info li {
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reachout-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reachout-section .text-start {
+    text-align: center;
+  }
+
+  .reachout-section button {
+    margin-top: 20px;
+  }
+}
+
+
+/* ....................Main Footer Content */
+.footer-main-section{
+        background: #111;
+    
+
+}
+.footer-main {
+     background-image: 
+                    url('/images/shape-13.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-top: 200px;
+  padding-bottom: 60px;
+  color: white; /* text visible on dark overlay */
+}
+
+/* .footer-main {
+
+    background-position: 50%;
+    background-repeat: no-repeat;
+  
+
+    background-image: url('/public/images/shape-21.png');
+  background: #000;
+  padding-bottom: 60px;
+  padding-top: 150px;
+} */
+.footer-main-section {
+  width: 100%;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* background image + dark overlay */
+/* .footer-main {
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('/images/shape-21.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+} */
+
+/* container */
+.footer-main .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* headings */
+.footer-main h4 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.footer-main h5 {
+  font-size: 1rem;
+  margin: 16px 0;
+  color: rgba(255,255,255,0.9);
+}
+
+/* tel button style */
+.footer-main a[href^="tel:"] {
+  display: inline-flex;
+  align-items: center;
+ 
+  background: #0d419a ;
+  color: #fff;
+  padding: 10px 10px;
+  /* padding-right: 10px; */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.footer-main a[href^="tel:"]:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-3px);
+}
+
+/* social buttons */
+.social-icons {
+  margin-top: 1.5rem;
   display: flex;
   gap: 12px;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.contact-info .icon {
+/* Base Style */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #fff;
   font-size: 20px;
-  color: #0052CC;
-  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.contact-info div {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+/* --- Twitter --- */
+.social-btn.twitter {
+  color: #1da1f2; /* Twitter Blue */
 }
-
-.contact-info strong {
+.social-btn.twitter:hover {
+  background-color: #1da1f2;
   color: #fff;
-  font-size: 14px;
-  font-weight: 600;
 }
 
-.contact-info a,
-.contact-info span {
-  color: rgba(255, 255, 255, 0.7);
+/* --- Facebook --- */
+.social-btn.facebook {
+  color: #1877f2; /* Facebook Blue */
+}
+.social-btn.facebook:hover {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+/* --- Reddit --- */
+.social-btn.reddit {
+  color: rgb(225, 87, 110); /* Reddit Pinkish Orange */
+}
+.social-btn.reddit:hover {
+  background-color: rgb(225, 87, 110)
+  ;
+  color: #fff;
+}
+
+/* Optional: make icons slightly smaller on mobile */
+@media (max-width: 640px) {
+  .social-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
+
+
+/* list styles */
+.footer-main ul.list-decimal-styled {
+  /* padding-left: 18px; */
+  color: rgba(255,255,255,0.9);
+}
+.footer-main ul.list-decimal-styled li {
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.footer-main .list-unstyled {
+  list-style: none;
+  padding: 0;
+}
+.footer-main .list-unstyled li {
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+/* links */
+.footer-main a:not([href^="tel:"]) {
+  /* color: rgba(255,255,255,0.85); */
   text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
+}
+.footer-main a:not([href^="tel:"]):hover {
+  color: #fff;
 }
 
-.contact-info a:hover {
-  color: #0052CC;
+
+/* responsive */
+@media (max-width: 768px) {
+  .footer-main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .footer-main h4 {
+    font-size: 1.25rem;
+  }
 }
 
-/* Footer Bottom */
+/* ..................................................Footer Bottom */
 .footer-bottom {
   background: #000;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -265,29 +311,6 @@
   gap: 12px;
 }
 
-.logo-icon svg {
-  width: 40px;
-  height: 40px;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-name {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1;
-}
-
-.brand-tagline {
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 1px;
-  margin-top: 2px;
-}
 
 .footer-nav {
   display: flex;

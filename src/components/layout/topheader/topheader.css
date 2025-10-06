@@ -1,0 +1,170 @@
+/* src/components/layout/topheader.css */
+
+.header-top {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 12px 0;
+  color: #ffffff;
+}
+
+.outer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Left text */
+.text p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  white-space: nowrap;
+  padding-left: 74px;
+}
+
+/* Right section */
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Contact info */
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.info-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.info-list > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.info-list svg {
+  width: 16px;
+  height: 16px;
+  color: #ffffff;
+}
+
+.info-list a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-list a:hover {
+  color: #ffd700;
+}
+
+/* Social info */
+.social-info ul {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-info h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.social-info li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.social-info li a:hover {
+  background: #ffffff;
+  color: #1e3c72;
+  transform: translateY(-2px);
+}
+
+.social-info svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .top-inner {
+    gap: 15px;
+  }
+  
+  .phone {
+    gap: 20px;
+  }
+  
+  .text p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .phone {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .info-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .text p {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-top {
+    padding: 10px 0;
+  }
+  
+  .outer-container {
+    padding: 0 15px;
+  }
+  
+  .text p,
+  .info-list,
+  .social-info h6 {
+    font-size: 12px;
+  }
+  
+  .social-info li a {
+    width: 28px;
+    height: 28px;
+  }
+}
