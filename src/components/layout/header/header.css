@@ -1,0 +1,365 @@
+/* ===== Header Top Bar ===== */
+.header-top {
+  background: #0d3b66; /* deep blue */
+  color: #fff;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  font-size: 14px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+
+.outer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+
+.top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ===== Left: text ===== */
+.text p {
+  margin: 0;
+  color: #e6f0fb;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding-left: 75px;
+}
+
+/* ===== Middle: contact info ===== */
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.social-links.clearfix {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.social-links.clearfix li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+}
+
+/* Links styling */
+.contact-info a,
+.social-info a,
+.social-links.clearfix a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.18s ease, transform 0.18s ease;
+  font-weight: 500;
+}
+
+.contact-info a:hover,
+.social-info a:hover,
+.social-links.clearfix a:hover {
+  color: white; /* accent on hover */
+  transform: translateY(-1px);
+}
+
+/* Icon styling (react-icons SVGs) */
+.contact-info svg,
+.social-info svg,
+.social-links.clearfix svg {
+  width: 18px;
+  height: 18px;
+  color: white; /* primary icon color */
+  flex-shrink: 0;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.contact-info svg:hover,
+.social-info svg:hover,
+.social-links.clearfix svg:hover {
+  transform: scale(1.15);
+  color: #ffffff;
+}
+
+/* ===== Right: social block ===== */
+.social-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-info ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-info li h6 {
+  margin: 0;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Small visual tweak: separate contact and social on small screens */
+@media (max-width: 900px) {
+  .top-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .phone {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .contact-info {
+    flex: 1 1 auto;
+  }
+
+  .social-info {
+    margin-top: 8px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .outer-container {
+    padding: 8px 12px;
+  }
+
+  .text p {
+    font-size: 13px;
+  }
+
+  .social-links.clearfix,
+  .social-info ul {
+    gap: 8px;
+  }
+
+  .contact-info a,
+  .social-info a {
+    font-size: 13px;
+  }
+
+  .contact-info svg,
+  .social-info svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+/*  ...............................................................................header */
+
+/* ---------- Basic header layout ---------- */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(11,37,69,0.06);
+  color: #0b2545;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  position: relative;
+}
+
+.header-container {
+  /* max-width: 1300px; */
+  margin: 0 auto;
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+  /* gap: 18px; */
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+.logo-icon svg { color: #0d6efd; }
+.logo-name { display:block; font-weight:700; color:#0b2545; }
+.logo-subtitle { display:block; font-size:11px; color:#6b7b8a; letter-spacing:0.6px; }
+
+/* Nav (desktop) */
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+/* hide the submenu checkbox inputs visually */
+.submenu-toggle,
+.mobile-menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  left: -9999px;
+}
+
+/* nav-item */
+.nav-item {
+  position: relative;
+}
+
+/* nav-link label/button style */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  /* gap: 8px; */
+  cursor: pointer;
+  color: #0b2545;
+  text-decoration: none;
+  font-weight:600;
+  padding: 8px 6px;
+  border-radius: 4px;
+}
+
+/* arrow */
+.dropdown-arrow { font-size: 12px; opacity: 0.8; margin-left:4px; }
+
+/* Dropdown container (hidden by default) */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 300px;
+  background: #fff;
+  border: 1px solid rgba(11,37,69,0.06);
+  box-shadow: 0 6px 18px rgba(11,37,69,0.06);
+  padding: 8px 0;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(6px);
+  visibility: hidden;
+  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms;
+  z-index: 40;
+}
+
+/* Dropdown links */
+.dropdown a {
+  display: block;
+  padding: 8px 14px;
+  color: #243447;
+  text-decoration: none;
+  font-weight: 500;
+}
+.dropdown a:hover { background: rgba(13,110,253,0.06); color:#0d6efd; }
+
+/* Show dropdown on hover (desktop) OR when parent gets focus-within (keyboard) */
+.nav-item:hover > .dropdown,
+.nav-item:focus-within > .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* ---------- Mobile behaviour ---------- */
+.menu-btn {
+  display: none; /* visible only on small screens */
+  width: 36px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.menu-btn span {
+  display: block;
+  height: 3px;
+  background: #0b2545;
+  width: 100%;
+  border-radius: 2px;
+}
+
+/* Mobile menu (hidden by default). It becomes visible when #mobile-menu-toggle is checked */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: #ffffff;
+  border-top: 1px solid rgba(11,37,69,0.04);
+  z-index: 30;
+  padding: 14px 18px;
+}
+
+/* When mobile toggle checked -> show mobile menu */
+.mobile-menu-toggle:checked ~ .mobile-menu {
+  display: block;
+}
+
+/* For small screens, show submenu on label click (checkbox checked) */
+/* .submenu-toggle:checked + .nav-link + .dropdown,
+.submenu-toggle:focus + .nav-link + .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+} */
+.book-btn {
+  background-color: #007bff; /* blue color */
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-btn:hover {
+  background-color: #0056b3; /* darker blue */
+  transform: translateY(-2px);
+}
+
+.book-btn:active {
+  transform: translateY(0);
+}
+
+/* ---------- Responsive rules ---------- */
+@media (max-width: 880px) {
+  .nav { display: block; width: 100%; }
+  .nav-item { display: block; border-bottom: 1px solid rgba(11,37,69,0.03); }
+  .nav-link { display: flex; justify-content: space-between; width: 100%; padding: 12px 8px; }
+  .dropdown { position: relative; top: 0; left: 0; transform: none; visibility: visible; opacity: 1; box-shadow: none; border: none; padding-left: 18px; display: none; }
+  /* show dropdown only when checkbox checked (mobile) */
+  .submenu-toggle:checked + .nav-link + .dropdown { display: block; }
+  .menu-btn { display: flex; }
+  .header-container { align-items: center; }
+  .logo { flex: 0 0 auto; }
+  .header-actions { display: flex; gap: 10px; }
+  .mobile-menu { display: none; } /* mobile-menu is controlled by checkbox */
+}
+
+/* small tweaks */
+.nav .nav-item + .nav-item { margin-left: 6px; }
+.header-actions { display:flex; gap:12px; align-items:center; }
+.search-btn { background: transparent; border: none; cursor: pointer; padding:8px; color: #0b2545; }
+.search-btn svg { display:block; }
+
+/* Accessibility: focus styles */
+.nav-link:focus { outline: 3px solid rgba(13,110,253,0.12); outline-offset: 3px; border-radius:4px; }
+.menu-btn:focus { outline: 3px solid rgba(13,110,253,0.12); outline-offset: 3px; border-radius:4px; }
