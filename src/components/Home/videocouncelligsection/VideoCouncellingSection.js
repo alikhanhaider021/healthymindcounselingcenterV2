@@ -13,12 +13,14 @@ const VideoCouncellingSection = () => {
               <div className="videoWrapper">
                 <video
                   className="video"
+                  muted        // add this for autoplay support
+                  autoPlay
                   controls
                   playsInline
                   preload="metadata"
                   poster="/counseling-thumbnail.jpg"
                 >
-                  <source src="/images/landingpageCopy.mp4" type="video/mp4" />
+                  <source src="/images/landingpageCopy .mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
