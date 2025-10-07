@@ -46,7 +46,7 @@ export default function FooterSection() {
                 <h4>Contact Information</h4>
 
                 <h5>
-                  <Link href="tel:+13862439299">
+                  <Link href="tel:(386) 243-9299">
                     <span className='flex items-center gap-2'>
                       <LiaPhoneVolumeSolid /> (386) 243-9299
                     </span>
@@ -60,7 +60,7 @@ export default function FooterSection() {
                   <FaMapMarkerAlt className="text-2xl text-[#0d419a] " /> 395 Palm Coast Parkway SW
                 </h5>
                 <h5 className='flex items-center gap-2'>
-                  <FaBuilding className="text-2xl text-[#0d419a] " /> Suite 4
+                 <FaMapMarkerAlt className="text-2xl text-[#0d419a] " /> Suite 4
                 </h5>
                 <h5 className='flex items-center gap-2'>
                   <FaMapMarkerAlt className="text-2xl text-[#0d419a] " /> Palm Coast, FL 32137
@@ -79,6 +79,7 @@ export default function FooterSection() {
                   </Link>
 
                   <Link
+                    // href="https://www.facebook.com/Healthy-Mind-Counseling-Center-109616265215558"
                     href="https://www.facebook.com/Healthy-Mind-Counseling-Center-109616265215558"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -89,7 +90,8 @@ export default function FooterSection() {
                   </Link>
 
                   <Link
-                    href="https://www.reddit.com/user/healthymindcoun"
+                  href="https://www.reddit.com/user/healthymindcoun"
+                    // href="https://www.reddit.com/user/healthymindcoun"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Reddit"

@@ -49,7 +49,7 @@ export default function IntroSection() {
               
               {/* Experience Box Overlay */}
               <div className="experience-box">
-                <div className="experience-number">30</div>
+                <div className="experience-number">10</div>
                 <div className="experience-text">
                   Years of Experience in<br />This Field
                 </div>
