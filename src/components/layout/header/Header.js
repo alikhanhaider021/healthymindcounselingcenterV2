@@ -10,10 +10,14 @@ const HeaderNavbar = () => {
     return (
         <>
 
+        
+<div>
+  
         {/* top section */}
-         <Topheader/>
 
 {/* ..............................................................................................header */}
+<div className="header-main-navbar-section">
+ <Topheader/>
  <header className="header">
       <div className="header-container">
         {/* Logo */}
@@ -179,6 +183,8 @@ const HeaderNavbar = () => {
         </nav>
       </div>
     </header>
+    </div>
+    </div>
         </>
     )
 }
