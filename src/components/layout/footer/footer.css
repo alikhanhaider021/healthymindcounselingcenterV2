@@ -3,7 +3,8 @@
 .footer {
   width: 100%;
   /* background: #000; */
-  color: #fff;
+    background-color: #f8f9fa;
+
   padding-top: 40px;
   /* overflow: visible; */
 }
