@@ -22,16 +22,16 @@ const Topheader = () => {
           </div>
 
           {/* Right: contact + social */}
-          <div className="phone" >
-            <div className="contact-info-phone" >
-              <div className=" info-list ">
+          <div className="phone">
+            <div className="contact-info-phone">
+              <div className="info-list">
                 <div>
                   <MdOutlineEmail />
-                  <a href="mailto:example@info.com">example@info.com</a>
+                  <Link href="mailto:example@info.com">example@info.com</Link>
                 </div>
                 <div>
-                  <LiaPhoneVolumeSolid  />
-                  <a href="tel:+911234567890">+91 1234567890</a>
+                  <LiaPhoneVolumeSolid />
+                  <Link href="tel:+911234567890">+91 1234567890</Link>
                 </div>
               </div>
             </div>
@@ -42,17 +42,17 @@ const Topheader = () => {
                   <h6>Follow Us</h6>
                 </li>
                 <li>
-                  <Link href="/" >
+                  <Link href="/" aria-label="Facebook">
                     <FaFacebook />
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" >
+                  <Link href="/" aria-label="Instagram">
                     <IoLogoInstagram />
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" >
+                  <Link href="/" aria-label="WhatsApp">
                     <BsWhatsapp />
                   </Link>
                 </li>
