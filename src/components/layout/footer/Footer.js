@@ -17,13 +17,13 @@ export default function FooterSection() {
         <div className="container">
           <div className="reachout-section">
   <div className="text-start">
-    <h5>Let's connect online and get started!</h5>
-    <p>Everyone deserves peace of mind. Let’s talk, listen, and work together toward a healthier, happier you — because mental health is just as important as physical health.</p>
+    <h5>{"Let's connect online and get started!"}</h5>
+    <p>{"Everyone deserves peace of mind. Let's talk, listen, and work together toward a healthier, happier you — because mental health is just as important as physical health."}</p>
   </div>
   <div>
-    <a href="/contact-us">
+    <Link href="/contact-us">
       <button>GET STARTED</button>
-    </a>
+    </Link>
   </div>
 </div>
         </div>

@@ -18,7 +18,7 @@ const Topheader = () => {
         <div className="top-inner">
           {/* Left: message */}
           <div className="text">
-            <p>Your health is our priority — we're here for you 24/7</p>
+            <p>{"Your health is our priority — we're here for you 24/7"}</p>
           </div>
 
           {/* Right: contact + social */}
@@ -27,11 +27,11 @@ const Topheader = () => {
               <div className=" info-list ">
                 <div>
                   <MdOutlineEmail />
-                  <a href="/">example@info.com</a>
+                  <a href="mailto:example@info.com">example@info.com</a>
                 </div>
                 <div>
                   <LiaPhoneVolumeSolid  />
-                  <a href="/">+91 1234567890</a>
+                  <a href="tel:+911234567890">+91 1234567890</a>
                 </div>
               </div>
             </div>
