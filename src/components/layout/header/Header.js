@@ -47,7 +47,7 @@ const HeaderNavbar = () => {
                     aria-hidden="true"
                   />
                   <label htmlFor="toggle-about" className="nav-link" tabIndex="0">
-            <Link href="/" className="nav-link">Home</Link>     
+            <Link href="/" className="nav-link">HOME</Link>     
                   </label>
                 </div>
 
@@ -60,7 +60,7 @@ const HeaderNavbar = () => {
                     aria-hidden="true"
                   />
                   <label htmlFor="toggle-home" className="nav-link" tabIndex="0">
-                    Services <span className="dropdown-arrow">▾</span>
+                    SERVICES <span className="dropdown-arrow">▾</span>
                   </label>
 
                   <ul className="dropdown" id="menu-home" role="menu" aria-label="Home submenu">
@@ -90,9 +90,9 @@ const HeaderNavbar = () => {
                     className="submenu-toggle"
                     aria-hidden="true"
                   />
-                  <label htmlFor="toggle-departments" className="nav-link" tabIndex="0">
-                    Rates and Insurance
-                  </label>
+
+                    <Link href="/ratesInsurancepolicy" className="nav-link">  RATES AND INSURANCE </Link>
+                
                 </div>
 
                 {/* PAGES */}
@@ -104,7 +104,7 @@ const HeaderNavbar = () => {
                     aria-hidden="true"
                   />
                   <label htmlFor="toggle-pages" className="nav-link" tabIndex="0">
-                    Client Portal
+                    CLIENT PORTAL
                   </label>
                 </div>
 
@@ -117,12 +117,12 @@ const HeaderNavbar = () => {
                     aria-hidden="true"
                   />
                   <label htmlFor="toggle-getstarted" className="nav-link" tabIndex="0">
-                    Get Started <span className="dropdown-arrow">▾</span>
+                    GET STARTED <span className="dropdown-arrow">▾</span>
                   </label>
 
                   <ul className="dropdown" id="menu-getstarted" role="menu" aria-label="Pages submenu">
-                    <li role="none"><Link href="/doctors" role="menuitem">Get Started</Link></li>
-                    <li role="none"><Link href="/portfolio" role="menuitem">FAQs</Link></li>
+                    <li role="none"><Link href="/Getstarted" role="menuitem">Get Started</Link></li>
+                    <li role="none"><Link href="/faqs" role="menuitem">FAQs</Link></li>
                     <li role="none"><Link href="/pricing" role="menuitem">Client Portal</Link></li>
                   </ul>
                 </div>
@@ -130,7 +130,7 @@ const HeaderNavbar = () => {
                 {/* BLOG / Privacy & Confidentiality */}
                 <div className="nav-item">
                   {/* escaped ampersand */}
-                  <Link href="/privacyconfidentiality" className="nav-link">Privacy &amp; Confidentiality</Link>
+                  <Link href="/privacyconfidentiality" className="nav-link">PRIVACY &amp; CONFIDENTIALITY</Link>
                 </div>
 
                 {/* CONTACT */}

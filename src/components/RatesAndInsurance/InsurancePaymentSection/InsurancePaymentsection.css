@@ -1,0 +1,190 @@
+
+
+.insurance-payment-section-bg{
+   /* background-image: url("/images/shape-8.png");
+          background-repeat: no-repeat;
+          background-position: center; */
+          width: 100%;
+             background: linear-gradient(180deg, #e1e9f1 0%, #e3eefc 100%);
+          
+
+}
+        .insurance-payment-wrapper {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 80px 20px;
+       
+
+        }
+
+        .insurance-section-header {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #1e293b;
+          margin-bottom: 24px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .insurance-description-text {
+          font-size: 1.125rem;
+          line-height: 1.8;
+          color: #64748b;
+          margin-bottom: 48px;
+        }
+
+        .insurance-provider-highlight {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #667eea;
+          display: inline-block;
+          margin: 0 8px;
+        }
+
+        .insurance-logos-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 60px;
+          margin: 60px 0;
+          flex-wrap: wrap;
+        }
+
+        .insurance-logo-card {
+          background: white;
+          padding: 40px;
+          border-radius: 20px;
+          box-shadow: 0 10px 40px rgba(102, 126, 234, 0.15);
+          transition: all 0.3s ease;
+          width: 420px;
+          height: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .insurance-logo-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25);
+        }
+
+        .insurance-logo-image {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 12px;
+        }
+
+        .insurance-examination-prompt {
+          font-size: 1.125rem;
+          font-weight: 600;
+          color: #1e293b;
+          margin: 60px 0 32px 0;
+        }
+
+        .insurance-questions-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .insurance-question-item {
+          background: white;
+          padding: 24px 28px;
+          margin-bottom: 16px;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+          transition: all 0.3s ease;
+          border-left: 4px solid transparent;
+        }
+
+        .insurance-question-item:hover {
+          border-left-color: #667eea;
+          box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+          transform: translateX(8px);
+        }
+
+        .insurance-question-icon-badge {
+          width: 48px;
+          height: 48px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          flex-shrink: 0;
+          box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .insurance-question-text {
+          font-size: 1rem;
+          color: #334155;
+          font-weight: 500;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        .payment-section-divider {
+          height: 2px;
+          background: linear-gradient(90deg, transparent 0%, #667eea 50%, transparent 100%);
+          margin: 80px 0 60px 0;
+        }
+
+        .payment-section-header {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #1e293b;
+          margin-bottom: 24px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .payment-description-text {
+          font-size: 1.125rem;
+          line-height: 1.8;
+          color: #64748b;
+          background: white;
+          padding: 32px;
+          border-radius: 16px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+          border-left: 4px solid #667eea;
+        }
+
+        @media (max-width: 768px) {
+          .insurance-payment-wrapper {
+            padding: 40px 16px;
+          }
+
+          .insurance-section-header,
+          .payment-section-header {
+            font-size: 2rem;
+          }
+
+          .insurance-logos-container {
+            gap: 30px;
+          }
+
+          .insurance-logo-card {
+            width: 100%;
+            max-width: 300px;
+          }
+
+          .insurance-question-item {
+            padding: 20px;
+          }
+
+          .insurance-question-icon-badge {
+            width: 40px;
+            height: 40px;
+            font-size: 1.25rem;
+          }
+        }
+     
