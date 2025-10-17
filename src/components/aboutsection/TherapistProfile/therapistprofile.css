@@ -1,0 +1,287 @@
+/* therapistprofile.css */
+
+/* ========== Section & Container ========== */
+.therapist-section {
+  position: relative;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 50%, #eff6ff 100%);
+  min-height: 100vh;
+}
+
+.therapist-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ========== Header Styles ========== */
+.therapist-header {
+  margin-bottom: 3rem;
+}
+
+.therapist-header-content {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.therapist-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.therapist-badge-text {
+  color: #0d9488;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.therapist-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.therapist-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+}
+
+.therapist-divider {
+  width: 6rem;
+  height: 0.25rem;
+  background: linear-gradient(90deg, #14b8a6 0%, #3b82f6 100%);
+  margin: 1.5rem auto;
+  border-radius: 9999px;
+}
+
+/* ========== Main Grid Layout ========== */
+.therapist-main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+
+/* ========== Image Column ========== */
+.therapist-image-column {
+  width: 100%;
+}
+
+.therapist-image-wrapper {
+  position: relative;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.therapist-image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #5eead4 0%, #60a5fa 100%);
+  border-radius: 1rem;
+  transform: rotate(3deg);
+  z-index: 0;
+}
+
+.therapist-image {
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* ========== Specialty Column ========== */
+.therapist-specialty-column {
+  width: 100%;
+}
+
+.therapist-specialty-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  height: 100%;
+}
+
+.therapist-specialty-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.therapist-specialty-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.therapist-specialty-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.therapist-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.therapist-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #14b8a6;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.therapist-list-text {
+  color: #374151;
+}
+
+/* ========== Biography Section ========== */
+.therapist-bio-wrapper {
+  width: 100%;
+}
+
+.therapist-bio-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.therapist-bio-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+}
+
+.therapist-bio-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.therapist-bio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.therapist-bio-paragraph {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+.therapist-approach-box {
+  background: linear-gradient(90deg, #f0fdfa 0%, #eff6ff 100%);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.therapist-approach-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.therapist-approach-text {
+  color: #374151;
+  line-height: 1.75;
+}
+
+/* ========== Responsive Design ========== */
+
+/* Tablet & Above */
+@media (min-width: 640px) {
+  .therapist-specialty-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .therapist-section {
+    padding: 5rem 0;
+  }
+  
+  .therapist-header {
+    margin-bottom: 4rem;
+  }
+  
+  .therapist-title {
+    font-size: 3rem;
+  }
+  
+  .therapist-main-grid {
+    margin-bottom: 4rem;
+  }
+  
+  .therapist-specialty-card {
+    padding: 2.5rem;
+  }
+  
+  .therapist-bio-card {
+    padding: 3rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .therapist-main-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  
+  .therapist-specialty-title {
+    font-size: 2rem;
+  }
+  
+  .therapist-bio-title {
+    font-size: 2rem;
+  }
+}
+
+/* Hover Effects */
+.therapist-specialty-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* Animation */
+@keyframes therapist-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.therapist-animate-fade-in {
+  animation: therapist-fade-in-up 0.6s ease-out;
+}

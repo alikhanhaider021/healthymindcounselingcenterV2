@@ -35,7 +35,22 @@ const HeaderNavbar = () => {
               />
 
               {/* Navigation */}
+
+
               <nav className="nav" role="navigation" aria-label="Main navigation">
+ {/* Home */}
+                <div className="nav-item nav-has-children">
+                  <input
+                    type="checkbox"
+                    id="toggle-about"
+                    className="submenu-toggle"
+                    aria-hidden="true"
+                  />
+                  <label htmlFor="toggle-about" className="nav-link" tabIndex="0">
+            <Link href="/" className="nav-link">Home</Link>     
+                  </label>
+                </div>
+
                 {/* HOME (Services) */}
                 <div className="nav-item nav-has-children">
                   <input
@@ -64,9 +79,7 @@ const HeaderNavbar = () => {
                     className="submenu-toggle"
                     aria-hidden="true"
                   />
-                  <label htmlFor="toggle-about" className="nav-link" tabIndex="0">
-                    ABOUT
-                  </label>
+                   <Link href="/about" className="nav-link">ABOUT</Link>
                 </div>
 
                 {/* DEPARTMENTS */}
@@ -117,17 +130,18 @@ const HeaderNavbar = () => {
                 {/* BLOG / Privacy & Confidentiality */}
                 <div className="nav-item">
                   {/* escaped ampersand */}
-                  <Link href="/blog" className="nav-link">Privacy &amp; Confidentiality</Link>
+                  <Link href="/privacyconfidentiality" className="nav-link">Privacy &amp; Confidentiality</Link>
                 </div>
 
                 {/* CONTACT */}
                 <div className="nav-item">
                   <Link href="/contact" className="nav-link">CONTACT</Link>
+                      
                 </div>
 
                 {/* RESOURCE */}
                 <div className="nav-item">
-                  <Link href="/contact" className="nav-link">RESOURCES</Link>
+                  <Link href="/resources" className="nav-link">RESOURCES</Link>
                 </div>
               </nav>
 

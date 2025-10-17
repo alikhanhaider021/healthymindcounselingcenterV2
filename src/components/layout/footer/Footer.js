@@ -7,6 +7,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { LiaPhoneVolumeSolid } from "react-icons/lia";
 import { FaMapMarkerAlt, FaBuilding } from "react-icons/fa";
 import Image from 'next/image';
+import FooterMap from './Footermap';
 
 export default function FooterSection() {
   return (
@@ -141,6 +142,14 @@ export default function FooterSection() {
                   </div>
                 </div>
               </div>
+
+
+{/* .............................................................Footermap */}
+<div className="w-full lg:w-1/3 px-4 sm:mt-2">
+<h4 > Location </h4>
+  <FooterMap/>
+</div>
+
 
             </div>
 
