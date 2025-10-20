@@ -1,0 +1,296 @@
+/* Section Styles */
+.emdr-section {
+  position: relative;
+  padding: 5rem 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #eff6ff, #ffffff, #faf5ff);
+}
+
+/* Container */
+.emdr-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Decorative Background Elements */
+.emdr-bg-decoration-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24rem;
+  height: 24rem;
+  background-color: #bfdbfe;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  filter: blur(64px);
+  opacity: 0.2;
+  animation: emdr-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.emdr-bg-decoration-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24rem;
+  height: 24rem;
+  background-color: #e9d5ff;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  filter: blur(64px);
+  opacity: 0.2;
+  animation: emdr-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Flex Wrapper */
+.emdr-flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Image Column */
+.emdr-image-column {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .emdr-image-column {
+    width: 50%;
+  }
+}
+
+/* Image Group */
+.emdr-image-group {
+  position: relative;
+}
+
+/* Decorative Border */
+.emdr-decorative-border {
+  position: absolute;
+  inset: -0.25rem;
+  background: linear-gradient(to right, #60a5fa, #c084fc, #f9a8d4);
+  border-radius: 1rem;
+  filter: blur(8px);
+  opacity: 0.3;
+  transition: opacity 0.5s;
+}
+
+.emdr-image-group:hover .emdr-decorative-border {
+  opacity: 0.6;
+}
+
+/* Image Container */
+.emdr-image-container {
+  position: relative;
+}
+
+.emdr-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.emdr-image-group:hover .emdr-image {
+  transform: scale(1.05);
+}
+
+/* Image Overlay */
+.emdr-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(30, 58, 138, 0.2), transparent);
+  border-radius: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.emdr-image-group:hover .emdr-image-overlay {
+  opacity: 1;
+}
+
+/* Floating Decoration */
+.emdr-floating-decoration {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(to bottom right, #60a5fa, #a855f7);
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(40px);
+}
+
+/* Content Column */
+.emdr-content-column {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .emdr-content-column {
+    width: 41.666667%;
+  }
+}
+
+.emdr-content-wrapper {
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .emdr-content-wrapper {
+    padding-right: 3rem;
+  }
+}
+
+/* Heading Section */
+.emdr-heading-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .emdr-heading-wrapper {
+    width: 83.333333%;
+    padding-right: 3rem;
+  }
+}
+
+.emdr-heading-container {
+  position: relative;
+  display: inline-block;
+}
+
+.emdr-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(to right, #2563eb, #9333ea, #db2777);
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin-bottom: 0.5rem;
+  background-size: 200% 200%;
+  animation: emdr-gradient-animation 3s ease infinite;
+}
+
+.emdr-heading-underline {
+  height: 0.25rem;
+  width: 6rem;
+  background: linear-gradient(to right, #3b82f6, #a855f7);
+  border-radius: 9999px;
+}
+
+/* Description Container */
+.emdr-description-container {
+  position: relative;
+}
+
+.emdr-description {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #374151;
+  text-align: justify;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+  transition: box-shadow 0.3s;
+}
+
+.emdr-description:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.emdr-first-letter {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #9333ea;
+  float: left;
+  margin-right: 0.5rem;
+  line-height: 1;
+}
+
+/* Decorative Accent */
+.emdr-decorative-accent {
+  position: absolute;
+  left: -0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.25rem;
+  height: 5rem;
+  background: linear-gradient(to bottom, #3b82f6, #a855f7);
+  border-radius: 9999px;
+}
+
+/* Badge Section */
+.emdr-badge-section {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emdr-badge {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, #3b82f6, #a855f7);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.emdr-badge:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.25rem);
+}
+
+.emdr-pulse-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #a855f7;
+  border-radius: 50%;
+  animation: emdr-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.emdr-badge-text {
+  font-size: 0.875rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes emdr-gradient-animation {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes emdr-pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}

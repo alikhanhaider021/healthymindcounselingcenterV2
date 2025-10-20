@@ -8,12 +8,10 @@ export default function FooterMap() {
   const [leaflet, setLeaflet] = useState(null);
 
   useEffect(() => {
-    // dynamic client-only import
     let mounted = true;
     (async () => {
       const L = (await import("leaflet")).default;
       const rl = await import("react-leaflet");
-      // import CSS only on client
       await import("leaflet/dist/leaflet.css");
 
       if (!mounted) return;
@@ -41,11 +39,31 @@ export default function FooterMap() {
 
   const { L, MapContainer, TileLayer, Marker, Popup } = leaflet;
 
-  // Make sure this image exists: public/images/marker-icon.png
-  const customIcon = new L.Icon({
-    iconUrl: "/images/marker-icon.png",
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
+  // Custom pointed icon
+  const customIcon = new L.DivIcon({
+    html: `
+      <div style="
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: #ff4d4d;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0 0 10px rgba(255, 77, 77, 0.7);
+        animation: pulse 1.5s infinite;
+      ">
+      </div>
+      <style>
+        @keyframes pulse {
+          0% { transform: scale(0.9); opacity: 1; }
+          70% { transform: scale(1.3); opacity: 0.4; }
+          100% { transform: scale(0.9); opacity: 1; }
+        }
+      </style>
+    `,
+    className: "",
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
   });
 
   return (
@@ -54,7 +72,8 @@ export default function FooterMap() {
         center={position}
         zoom={15}
         scrollWheelZoom={false}
-        style={{ height: "100%", width: "100%" }} // match wrapper size
+        zoomControl={false} // hide + / - zoom buttons
+        style={{ height: "100%", width: "100%" }}
       >
         <TileLayer
           attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'

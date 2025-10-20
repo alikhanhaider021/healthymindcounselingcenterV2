@@ -19,7 +19,7 @@ const HeaderNavbar = () => {
               <div className="logo">
                 <Image
                   alt="Healthy Mind Counseling Center"
-                  className="w-full rounded-full align-middle border-none shadow-lg"
+                  className="w-full rounded-full align-middle border-none "
                   src="/images/logo.png"
                   width={58}
                   height={58}
@@ -64,6 +64,7 @@ const HeaderNavbar = () => {
                   </label>
 
                   <ul className="dropdown" id="menu-home" role="menu" aria-label="Home submenu">
+                    <li role="none" className=" border-b-2 border-blue-500 transition duration-300 " ><Link  href="/services" role="menuitem">Services</Link></li>
                     <li role="none"><Link href="/" role="menuitem">EMDR Therapy</Link></li>
                     <li role="none"><Link href="/index-2" role="menuitem">Cognitive-Behavioral Therapy</Link></li>
                     <li role="none"><Link href="/index-3" role="menuitem">Person-Centered Therapy</Link></li>

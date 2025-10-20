@@ -1,0 +1,411 @@
+/* TherapistRate Core CSS - Ultra Attractive Design */
+
+.TherapistRate-section {
+  padding-bottom: 10rem;
+  /* position: relative; */
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); */
+  /* background-size: 200% 200%; */
+      background: radial-gradient(circle, #1a213f 0, #0d419a 100%);
+  animation: TherapistRate-gradientShift 15s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes TherapistRate-gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.TherapistRate-topDecor {
+  margin-top: -5rem;
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 5rem;
+  transform: translateZ(0);
+  z-index: 2;
+}
+
+.TherapistRate-svg {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.TherapistRate-polygon {
+  fill: #ffffff;
+}
+
+.TherapistRate-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.TherapistRate-topContent {
+  padding-bottom: 8rem;
+  padding-top: 12rem;
+}
+
+.TherapistRate-flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.TherapistRate-textColumn {
+  width: 100%;
+  margin-left: auto;
+  padding: 0 3rem;
+  animation: TherapistRate-fadeInLeft 1s ease-out;
+}
+
+@keyframes TherapistRate-fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.TherapistRate-textInner {
+  padding-right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+}
+
+.TherapistRate-textInner:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.TherapistRate-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.TherapistRate-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+  animation: TherapistRate-lineExpand 2s ease-in-out infinite;
+}
+
+@keyframes TherapistRate-lineExpand {
+  0%, 100% { width: 100px; }
+  50% { width: 150px; }
+}
+
+.TherapistRate-paragraph {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.9;
+  color: #475569;
+  text-align: justify;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.TherapistRate-paragraph::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 4px;
+  height: calc(100% - 16px);
+  background: linear-gradient(180deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+.TherapistRate-imageColumn {
+  width: 100%;
+  margin-right: auto;
+  padding: 0 1rem;
+  padding-top: 6rem;
+  animation: TherapistRate-fadeInRight 1s ease-out;
+}
+
+@keyframes TherapistRate-fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.TherapistRate-image {
+  max-width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+  transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.TherapistRate-image::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  animation: TherapistRate-shine 3s infinite;
+}
+
+@keyframes TherapistRate-shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.TherapistRate-image:hover {
+  transform: scale(1.05) perspective(1040px) rotateY(-5deg) rotateX(1deg) rotate(0deg);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.TherapistRate-bottomSection {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  animation: TherapistRate-fadeInUp 1.2s ease-out;
+}
+
+@keyframes TherapistRate-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.TherapistRate-bottomContent {
+  width: 100%;
+  padding: 0 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  padding: 4rem 3rem;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.TherapistRate-bottomContent::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+  animation: TherapistRate-pulse 4s ease-in-out infinite;
+}
+
+@keyframes TherapistRate-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.5); opacity: 0.8; }
+}
+
+.TherapistRate-mainHeading {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #1e293b;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 20px rgba(102, 126, 234, 0.3);
+}
+
+.TherapistRate-descriptionText {
+  font-size: 1.125rem;
+  line-height: 2;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  color: #475569;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 1rem;
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(180deg, #667eea, #764ba2) 1;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.TherapistRate-descriptionText:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative Elements */
+.TherapistRate-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 400px;
+  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.2), transparent);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.TherapistRate-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.2), transparent);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.TherapistRate-container {
+  position: relative;
+  z-index: 1;
+}
+
+.TherapistRate-paragraph:first-of-type::first-letter {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  float: left;
+  line-height: 1;
+  margin-right: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+/* Floating Animation for Decorative Elements */
+@keyframes TherapistRate-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .TherapistRate-textColumn {
+    width: 41.666667%;
+    padding: 0 1rem;
+  }
+
+  .TherapistRate-textInner {
+    padding-right: 3rem;
+  }
+
+  .TherapistRate-imageColumn {
+    width: 50%;
+    padding-top: 0;
+  }
+
+  .TherapistRate-bottomContent {
+    width: 66.666667%;
+    padding: 4rem 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .TherapistRate-heading {
+    font-size: 2rem;
+  }
+
+  .TherapistRate-mainHeading {
+    font-size: 2rem;
+  }
+
+  .TherapistRate-paragraph,
+  .TherapistRate-descriptionText {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .TherapistRate-topContent {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+
+  .TherapistRate-textColumn,
+  .TherapistRate-bottomContent {
+    padding: 0 1.5rem;
+  }
+
+  .TherapistRate-textInner {
+    padding: 2rem 1.5rem;
+  }
+
+  .TherapistRate-bottomContent {
+    padding: 3rem 1.5rem;
+  }
+
+  .TherapistRate-image {
+    transform: scale(1);
+  }
+
+  .TherapistRate-image:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Scroll Animation Trigger Classes (Optional - add with JS) */
+.TherapistRate-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.TherapistRate-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
