@@ -1,187 +1,291 @@
 // src/components/layout/HeaderNavbar.jsx
-import Link from 'next/link'
-import React from 'react'
-import './header.css'
-import Image from 'next/image';
-import Topheader from '../topheader/topheader';
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import Topheader from "../topheader/topheader";
+import "./header.css";
 
 const HeaderNavbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
+  const toggleDropdown = (dropdown) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+    }
+    return () => document.body.classList.remove('mobile-menu-open');
+  }, [isMenuOpen]);
+
+  // Close menu on escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && isMenuOpen) closeMenu();
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [isMenuOpen]);
+
+  // Close mobile menu on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1450 && isMenuOpen) closeMenu();
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMenuOpen]);
+
   return (
     <>
-      <div>
-        {/* top section */}
-        {/* ..............................................................................................header */}
-        <div className="header-main-navbar-section">
-          <Topheader />
-          <header className="header">
-            <div className="header-container">
-              {/* Logo */}
-              <div className="logo">
+      <div className="header-main-navbar-section" role="banner">
+        <div className=" hidden sm:block ">
+ <Topheader />
+        </div>
+       
+
+        <header className="header" aria-label="Site header">
+          <div className="header-container">
+            {/* Logo */}
+            <div className="logo">
+              <Link
+                href="/"
+                className="logo-link"
+                aria-label="Healthy Mind Counseling Center home"
+                onClick={closeMenu}
+              >
                 <Image
                   alt="Healthy Mind Counseling Center"
-                  className="w-full rounded-full align-middle border-none "
                   src="/images/logo.png"
                   width={58}
                   height={58}
+                  priority
                 />
-              </div>
+              </Link>
+            </div>
 
-              {/* Mobile menu checkbox (controls the slide-in menu) */}
-              <input
-                type="checkbox"
-                id="mobile-menu-toggle"
-                className="mobile-menu-toggle"
-                aria-hidden="true"
-              />
+            {/* Desktop Navigation */}
+            <nav className="nav" role="navigation" aria-label="Main navigation">
+              <Link href="/" className="nav-link">
+                HOME
+              </Link>
 
-              {/* Navigation */}
-
-
-              <nav className="nav" role="navigation" aria-label="Main navigation">
- {/* Home */}
-                <div className="nav-item nav-has-children">
-                  <input
-                    type="checkbox"
-                    id="toggle-about"
-                    className="submenu-toggle"
-                    aria-hidden="true"
-                  />
-                  <label htmlFor="toggle-about" className="nav-link" tabIndex="0">
-            <Link href="/" className="nav-link">HOME</Link>     
-                  </label>
-                </div>
-
-                {/* HOME (Services) */}
-                <div className="nav-item nav-has-children">
-                  <input
-                    type="checkbox"
-                    id="toggle-home"
-                    className="submenu-toggle"
-                    aria-hidden="true"
-                  />
-                  <label htmlFor="toggle-home" className="nav-link" tabIndex="0">
-                    SERVICES <span className="dropdown-arrow">▾</span>
-                  </label>
-
-                  <ul className="dropdown" id="menu-home" role="menu" aria-label="Home submenu">
-                    <li role="none" className=" border-b-2 border-blue-500 transition duration-300 " ><Link  href="/services" role="menuitem">Services</Link></li>
-                    <li role="none"><Link href="/" role="menuitem">EMDR Therapy</Link></li>
-                    <li role="none"><Link href="/index-2" role="menuitem">Cognitive-Behavioral Therapy</Link></li>
-                    <li role="none"><Link href="/index-3" role="menuitem">Person-Centered Therapy</Link></li>
-                    <li role="none"><Link href="/index-3" role="menuitem">Solution Focused Therapy</Link></li>
-                  </ul>
-                </div>
-
-                {/* ABOUT */}
-                <div className="nav-item nav-has-children">
-                  <input
-                    type="checkbox"
-                    id="toggle-about"
-                    className="submenu-toggle"
-                    aria-hidden="true"
-                  />
-                   <Link href="/about" className="nav-link">ABOUT</Link>
-                </div>
-
-                {/* DEPARTMENTS */}
-                <div className="nav-item nav-has-children">
-                  <input
-                    type="checkbox"
-                    id="toggle-departments"
-                    className="submenu-toggle"
-                    aria-hidden="true"
-                  />
-
-                    <Link href="/ratesInsurancepolicy" className="nav-link">  RATES AND INSURANCE </Link>
-                
-                </div>
-
-                {/* PAGES */}
-                <div className="nav-item nav-has-children">
-                  <input
-                    type="checkbox"
-                    id="toggle-pages"
-                    className="submenu-toggle"
-                    aria-hidden="true"
-                  />
-                  <label htmlFor="toggle-pages" className="nav-link" tabIndex="0">
-                    CLIENT PORTAL
-                  </label>
-                </div>
-
-                {/* Get Started */}
-                <div className="nav-item nav-has-children">
-                  <input
-                    type="checkbox"
-                    id="toggle-getstarted"
-                    className="submenu-toggle"
-                    aria-hidden="true"
-                  />
-                  <label htmlFor="toggle-getstarted" className="nav-link" tabIndex="0">
-                    GET STARTED <span className="dropdown-arrow">▾</span>
-                  </label>
-
-                  <ul className="dropdown" id="menu-getstarted" role="menu" aria-label="Pages submenu">
-                    <li role="none"><Link href="/Getstarted" role="menuitem">Get Started</Link></li>
-                    <li role="none"><Link href="/faqs" role="menuitem">FAQs</Link></li>
-                    <li role="none"><Link href="/pricing" role="menuitem">Client Portal</Link></li>
-                  </ul>
-                </div>
-
-                {/* BLOG / Privacy & Confidentiality */}
-                <div className="nav-item">
-                  {/* escaped ampersand */}
-                  <Link href="/privacyconfidentiality" className="nav-link">PRIVACY &amp; CONFIDENTIALITY</Link>
-                </div>
-
-                {/* CONTACT */}
-                <div className="nav-item">
-                  <Link href="/contact" className="nav-link">CONTACT</Link>
-                      
-                </div>
-
-                {/* RESOURCE */}
-                <div className="nav-item">
-                  <Link href="/resources" className="nav-link">RESOURCES</Link>
-                </div>
-              </nav>
-
-              {/* Header Actions */}
-              <div className="header-actions">
-                <Link href="/appointment" aria-label="Book Appointment">
-                  <button className="book-btn">Book Appointment</button>
-                </Link>
-
-                {/* Mobile menu label toggles the hidden checkbox above */}
-                <label
-                  htmlFor="mobile-menu-toggle"
-                  className="menu-btn"
-                  aria-hidden="true"
-                  tabIndex="0"
+              <div className="nav-dropdown">
+                <button 
+                  className="nav-link dropdown-trigger"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
-                  <span></span><span></span><span></span>
-                </label>
+                  SERVICES
+                  <ChevronDown className="dropdown-icon" size={16} />
+                </button>
+                <div className="dropdown-menu" role="menu">
+                  <Link href="/services" role="menuitem">All Services</Link>
+                  <Link href="/emdr" role="menuitem">EMDR Therapy</Link>
+                  <Link href="/cbt" role="menuitem">Cognitive-Behavioral Therapy</Link>
+                  <Link href="/person-centered" role="menuitem">Person-Centered Therapy</Link>
+                  <Link href="/solution-focused" role="menuitem">Solution Focused Therapy</Link>
+                </div>
               </div>
+
+              <Link href="/about" className="nav-link">
+                ABOUT
+              </Link>
+
+              <Link href="/ratesInsurancepolicy" className="nav-link">
+                RATES & INSURANCE
+              </Link>
+
+              <Link href="/client-portal" className="nav-link">
+                CLIENT PORTAL
+              </Link>
+
+              <div className="nav-dropdown">
+                <button 
+                  className="nav-link dropdown-trigger"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  GET STARTED
+                  <ChevronDown className="dropdown-icon" size={16} />
+                </button>
+                <div className="dropdown-menu" role="menu">
+                  <Link href="/Getstarted" role="menuitem">Get Started</Link>
+                  <Link href="/faqs" role="menuitem">FAQs</Link>
+                  <Link href="/pricing" role="menuitem">Client Portal</Link>
+                </div>
+              </div>
+
+              <Link href="/privacyconfidentiality" className="nav-link">
+                PRIVACY
+              </Link>
+
+              <Link href="/contact" className="nav-link">
+                CONTACT
+              </Link>
+
+              <Link href="/resources" className="nav-link">
+                RESOURCES
+              </Link>
+            </nav>
+
+            {/* Header Actions */}
+            <div className="header-actions">
+              <Link href="/appointment" className="book-btn">
+                Book Appointment
+              </Link>
+
+              {/* Hamburger Menu Button - Only show when menu is closed */}
+              {!isMenuOpen && (
+                <button
+                  type="button"
+                  className="menu-toggle"
+                  onClick={toggleMenu}
+                  aria-label="Open menu"
+                  aria-expanded={false}
+                  aria-controls="mobile-menu"
+                >
+                  <Menu size={24} strokeWidth={2} />
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Mobile Menu Overlay */}
+          {isMenuOpen && (
+            <div 
+              className="mobile-overlay" 
+              onClick={closeMenu}
+              aria-hidden="true"
+            />
+          )}
+
+          {/* Mobile Slide Menu */}
+          <div 
+            id="mobile-menu"
+            className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}
+            aria-hidden={!isMenuOpen}
+          >
+            <div className="mobile-menu-header">
+              <h3>Menu</h3>
+              
+              {/* Close Button - Inside mobile menu header */}
+              <button
+                type="button"
+                className="menu-toggle active"
+                onClick={closeMenu}
+                aria-label="Close menu"
+                aria-expanded={true}
+              >
+                <X size={24} strokeWidth={2} />
+              </button>
             </div>
 
-            {/* Mobile slide-in menu (mirrors nav but styled differently on small screens) */}
-            <div className="mobile-menu">
-              <nav className="mobile-nav" role="navigation" aria-label="Mobile menu">
-                <ul>
-                  <li><Link href="/">Home</Link></li>
-                  <li><Link href="/about">About</Link></li>
-                  <li><Link href="/departments">Departments</Link></li>
-                  <li><Link href="/portfolio">Portfolio</Link></li>
-                  <li><Link href="/blog">Blog</Link></li>
-                  <li><Link href="/contact">Contact</Link></li>
-                </ul>
-              </nav>
-            </div>
-          </header>
-        </div>
+            <nav className="mobile-nav" role="navigation" aria-label="Mobile navigation">
+              <Link href="/" onClick={closeMenu}>
+                Home
+              </Link>
+
+              <div className="mobile-dropdown">
+                <button
+                  type="button"
+                  className={`mobile-dropdown-trigger ${activeDropdown === 'services' ? 'active' : ''}`}
+                  onClick={() => toggleDropdown('services')}
+                  aria-expanded={activeDropdown === 'services'}
+                  aria-controls="services-dropdown"
+                >
+                  Services
+                  <ChevronDown 
+                    className={`mobile-dropdown-icon ${activeDropdown === 'services' ? 'rotate' : ''}`} 
+                    size={20}
+                  />
+                </button>
+                {activeDropdown === 'services' && (
+                  <div id="services-dropdown" className="mobile-dropdown-content">
+                    <Link href="/services" onClick={closeMenu}>All Services</Link>
+                    <Link href="/emdr" onClick={closeMenu}>EMDR Therapy</Link>
+                    <Link href="/cbt" onClick={closeMenu}>Cognitive-Behavioral Therapy</Link>
+                    <Link href="/person-centered" onClick={closeMenu}>Person-Centered Therapy</Link>
+                    <Link href="/solution-focused" onClick={closeMenu}>Solution Focused Therapy</Link>
+                  </div>
+                )}
+              </div>
+
+              <Link href="/about" onClick={closeMenu}>
+                About
+              </Link>
+
+              <Link href="/ratesInsurancepolicy" onClick={closeMenu}>
+                Rates & Insurance
+              </Link>
+
+              <Link href="/client-portal" onClick={closeMenu}>
+                Client Portal
+              </Link>
+
+              <div className="mobile-dropdown">
+                <button
+                  type="button"
+                  className={`mobile-dropdown-trigger ${activeDropdown === 'getstarted' ? 'active' : ''}`}
+                  onClick={() => toggleDropdown('getstarted')}
+                  aria-expanded={activeDropdown === 'getstarted'}
+                  aria-controls="getstarted-dropdown"
+                >
+                  Get Started
+                  <ChevronDown 
+                    className={`mobile-dropdown-icon ${activeDropdown === 'getstarted' ? 'rotate' : ''}`} 
+                    size={20}
+                  />
+                </button>
+                {activeDropdown === 'getstarted' && (
+                  <div id="getstarted-dropdown" className="mobile-dropdown-content">
+                    <Link href="/Getstarted" onClick={closeMenu}>Get Started</Link>
+                    <Link href="/faqs" onClick={closeMenu}>FAQs</Link>
+                    <Link href="/pricing" onClick={closeMenu}>Client Portal</Link>
+                  </div>
+                )}
+              </div>
+
+              <Link href="/privacyconfidentiality" onClick={closeMenu}>
+                Privacy & Confidentiality
+              </Link>
+
+              <Link href="/contact" onClick={closeMenu}>
+                Contact
+              </Link>
+
+              <Link href="/resources" onClick={closeMenu}>
+                Resources
+              </Link>
+
+              <Link href="/appointment" className="mobile-book-btn" onClick={closeMenu}>
+                Book Appointment
+              </Link>
+            </nav>
+          </div>
+        </header>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default HeaderNavbar
+export default HeaderNavbar;

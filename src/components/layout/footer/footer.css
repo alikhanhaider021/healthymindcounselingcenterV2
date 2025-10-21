@@ -1,5 +1,7 @@
 /* app/components/Footer.module.css or app/globals.css */
-
+.location-line{
+  margin-top: 10px;
+}
 .footer {
   width: 100%;
   /* background: #000; */
@@ -99,8 +101,19 @@ box-shadow: -10px 10px 70px 0 #21ad6e4d;
   .reachout-section button {
     margin-top: 20px;
   }
+  .footer-top {
+  
+    padding: 10px 10px 10px;
+    width: 80%;
+
+  }
+  .reachout-section p {
+    
+    font-size: 0.8rem;
+   
 }
 
+}
 
 /* ....................Main Footer Content */
 .footer-main-section{
@@ -193,7 +206,7 @@ box-shadow: -10px 10px 70px 0 #21ad6e4d;
   margin-top: 1.5rem;
   display: flex;
   gap: 12px;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   align-items: center;
 }
 
@@ -282,7 +295,7 @@ box-shadow: -10px 10px 70px 0 #21ad6e4d;
 /* responsive */
 @media (max-width: 768px) {
   .footer-main {
-    padding-top: 40px;
+        padding-top: 200px;
     padding-bottom: 40px;
   }
   .footer-main h4 {
@@ -387,11 +400,15 @@ box-shadow: -10px 10px 70px 0 #21ad6e4d;
   }
 }
 
+
+@media (max-width: 639px) {
+    .footer-main{
+  padding-top: 20px;
+    } }
+
 @media (max-width: 480px) {
-  .footer-top {
-    padding: 30px 0;
-  }
   
+
   .emergency-box,
   .signup-box {
     padding: 24px;
@@ -408,8 +425,10 @@ box-shadow: -10px 10px 70px 0 #21ad6e4d;
   .signup-box h3 {
     font-size: 24px;
   }
-  
-  .footer-main {
-    padding: 40px 0 30px;
-  }
+  .footer-top {
+       
+        width: 95%;
+    }
+
+
 }

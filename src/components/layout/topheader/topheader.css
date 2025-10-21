@@ -1,170 +1,198 @@
-/* src/components/layout/topheader.css */
+/* topheader.css - responsive top header */
 
+/* Base styles */
 .header-top {
+  width: 100%;
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   padding: 12px 0;
-  color: #ffffff;
 }
 
 .outer-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+/* Layout */
 .top-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap; /* allow wrap on small screens */
 }
 
-/* Left text */
-.text p {
+/* Left message */
+.text {
+  flex: 1 1 320px; /* grow, shrink, basis */
+  min-width: 160px;
+}
+
+.top-message {
   margin: 0;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffffff;
+  line-height: 1.2;
   white-space: nowrap;
-  padding-left: 74px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 12px;
 }
 
-/* Right section */
+/* Right group */
 .phone {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 22px;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
-/* Contact info */
-.contact-info {
+/* Contact list */
+.contact-info-phone .info-list {
   display: flex;
   align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
-.info-list {
+.info-item {
   display: flex;
   align-items: center;
-  gap: 20px;
-}
-
-.info-list > div {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-size: 14px;
+  color: #fff;
+  min-width: 0; /* for ellipsis inside flex */
 }
 
-.info-list svg {
-  width: 16px;
-  height: 16px;
-  color: #ffffff;
+.icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  color: #fff;
 }
 
-.info-list a {
-  color: #ffffff;
+.info-link {
+  color: inherit;
   text-decoration: none;
-  transition: color 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+  transition: color .15s ease;
 }
 
-.info-list a:hover {
-  color: #ffd700;
+.info-link:hover,
+.info-link:focus {
+  color: #ffd166; /* subtle highlight */
+  outline: none;
 }
 
-/* Social info */
-.social-info ul {
+/* Social */
+.social-list {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.social-info h6 {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 500;
-  color: #ffffff;
+.social-heading {
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 6px;
+  color: rgba(255,255,255,0.95);
 }
 
-.social-info li a {
-  display: flex;
+.social-link {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  transition: all 0.3s ease;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  text-decoration: none;
+  transition: transform .12s ease, background-color .12s ease, color .12s ease;
 }
 
-.social-info li a:hover {
-  background: #ffffff;
+.social-link:focus,
+.social-link:hover {
+  transform: translateY(-3px);
+  background: #fff;
   color: #1e3c72;
-  transform: translateY(-2px);
+  outline: none;
 }
 
-.social-info svg {
-  width: 16px;
-  height: 16px;
+.social-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 
-/* Responsive */
+/* Responsive breakpoints */
+
+/* Large tablets / small laptops */
 @media (max-width: 1024px) {
-  .top-inner {
-    gap: 15px;
-  }
-  
-  .phone {
-    gap: 20px;
-  }
-  
-  .text p {
-    font-size: 13px;
-  }
+  .outer-container { padding: 0 18px; }
+  .top-message { font-size: 13px; }
+  .phone { gap: 18px; }
 }
 
+/* Tablet / mobile portrait */
 @media (max-width: 768px) {
   .top-inner {
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
     text-align: center;
   }
-  
-  .phone {
-    flex-direction: column;
-    gap: 12px;
+
+  .text {
+    order: 1;
+    width: 100%;
+    flex-basis: 100%;
   }
-  
-  .info-list {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .text p {
+
+  .top-message {
     white-space: normal;
+    font-size: 14px;
+    padding-left: 0;
+    margin-bottom: 6px;
   }
+
+  .phone {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .contact-info-phone .info-list {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .info-item { font-size: 13px; }
+
+  .social-heading { display: none; } /* hide label on small screens */
 }
 
-@media (max-width: 480px) {
-  .header-top {
-    padding: 10px 0;
-  }
-  
-  .outer-container {
-    padding: 0 15px;
-  }
-  
-  .text p,
-  .info-list,
-  .social-info h6 {
-    font-size: 12px;
-  }
-  
-  .social-info li a {
-    width: 28px;
-    height: 28px;
-  }
+/* Small phones */
+@media (max-width: 420px) {
+  .outer-container { padding: 0 12px; }
+  .top-message { font-size: 13px; }
+  .info-item { font-size: 12px; gap: 6px; }
+  .social-link { width: 32px; height: 32px; border-radius: 6px; }
+  .social-icon { width: 16px; height: 16px; }
+}
+
+/* Very small adjustments to ensure no clipping */
+@media (max-width: 360px) {
+  .top-message { font-size: 12px; }
+  .info-item { font-size: 11px; }
 }

@@ -9,6 +9,8 @@ import WhatWeDo from '@/components/services/servicesoverview/ServicesOverview'
 
 import React from 'react'
 import EMDRSection from '@/components/services/EMDRsection/EMDRSection'
+import PersonCenteredTherapy from '@/components/services/personcenteredtherapy/PersonCenteredTherapy'
+import SolutionFocusedTherapy from '@/components/services/solutionfocusedtherapy/SolutionFocusedTherapy'
 
 const services = () => {
   return (
@@ -22,6 +24,8 @@ const services = () => {
 <ZipSection/>
 <WhatWeDo/>
 <EMDRSection/>
+<PersonCenteredTherapy/>
+<SolutionFocusedTherapy/>
 </>
   )
 }

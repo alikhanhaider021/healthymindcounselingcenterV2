@@ -1,0 +1,201 @@
+
+        .solutionFocusedTherapySection {
+          position: relative;
+          background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 20%, #ffeaa7 40%, #74b9ff 60%, #a29bfe 80%, #fd79a8 100%);
+          padding: 5rem 0;
+          overflow: hidden;
+        }
+
+        .solutionFocusedTherapySection::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+          opacity: 0.3;
+        }
+
+        .solutionFocusedTherapyContainer {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .solutionFocusedTherapyWrapper {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 3rem;
+        }
+
+        .solutionFocusedTherapyImageCol {
+          flex: 1;
+          min-width: 300px;
+        }
+
+        .solutionFocusedTherapyImageWrapper {
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+          transform: perspective(1000px) rotateY(-5deg);
+          transition: all 0.5s ease;
+        }
+
+        .solutionFocusedTherapyImageWrapper:hover {
+          transform: perspective(1000px) rotateY(0deg) scale(1.05);
+          box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+        }
+
+        .solutionFocusedTherapyImageWrapper::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, rgba(255, 182, 193, 0.2) 0%, rgba(255, 218, 185, 0.2) 100%);
+          z-index: 1;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+
+        .solutionFocusedTherapyImageWrapper:hover::before {
+          opacity: 1;
+        }
+
+        .solutionFocusedTherapyImage {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: transform 0.5s ease;
+        }
+
+        .solutionFocusedTherapyImageWrapper:hover .solutionFocusedTherapyImage {
+          transform: scale(1.1);
+        }
+
+        .solutionFocusedTherapyContentCol {
+          flex: 1;
+          min-width: 300px;
+        }
+
+        .solutionFocusedTherapyContent {
+          background: rgba(255, 255, 255, 0.95);
+          padding: 3rem;
+          border-radius: 20px;
+          box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          transition: all 0.3s ease;
+        }
+
+        .solutionFocusedTherapyContent:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
+        }
+
+        .solutionFocusedTherapyTitleWrapper {
+          position: relative;
+          margin-bottom: 2rem;
+        }
+
+        .solutionFocusedTherapyTitle {
+          font-size: 2.5rem;
+          font-weight: 700;
+          background: linear-gradient(135deg, #fd79a8 0%, #74b9ff 50%, #a29bfe 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin: 0;
+          line-height: 1.2;
+          position: relative;
+          display: inline-block;
+        }
+
+        .solutionFocusedTherapyTitle::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 80px;
+          height: 4px;
+          background: linear-gradient(135deg, #fd79a8 0%, #a29bfe 100%);
+          border-radius: 2px;
+        }
+
+        .solutionFocusedTherapyDescription {
+          font-size: 1.125rem;
+          line-height: 1.8;
+          color: #4a5568;
+          margin: 0;
+          text-align: justify;
+          position: relative;
+          padding-left: 20px;
+        }
+
+        .solutionFocusedTherapyDescription::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 4px;
+          background: linear-gradient(180deg, #fd79a8 0%, #a29bfe 100%);
+          border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+          .solutionFocusedTherapySection {
+            padding: 3rem 0;
+          }
+
+          .solutionFocusedTherapyWrapper {
+            gap: 2rem;
+          }
+
+          .solutionFocusedTherapyContent {
+            padding: 2rem;
+          }
+
+          .solutionFocusedTherapyTitle {
+            font-size: 2rem;
+          }
+
+          .solutionFocusedTherapyDescription {
+            font-size: 1rem;
+          }
+
+          .solutionFocusedTherapyImageWrapper {
+            transform: none;
+          }
+
+          .solutionFocusedTherapyImageWrapper:hover {
+            transform: scale(1.02);
+          }
+        }
+
+        @keyframes solutionFocusedTherapyFadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .solutionFocusedTherapyImageCol,
+        .solutionFocusedTherapyContentCol {
+          animation: solutionFocusedTherapyFadeIn 0.8s ease forwards;
+        }
+
+        .solutionFocusedTherapyContentCol {
+          animation-delay: 0.2s;
+        }
+    

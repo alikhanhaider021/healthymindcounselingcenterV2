@@ -1,0 +1,364 @@
+/* PersonCenteredTherapy Section */
+.PersonCenteredTherapy {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 50%, #f0f4ff 100%);
+  overflow: hidden;
+}
+
+.PersonCenteredTherapy__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.PersonCenteredTherapy__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Content Section */
+.PersonCenteredTherapy__content {
+  flex: 1;
+  min-width: 300px;
+  animation: PersonCenteredTherapy__fadeInLeft 1s ease-out;
+}
+
+.PersonCenteredTherapy__contentInner {
+  max-width: 600px;
+}
+
+/* Badge */
+.PersonCenteredTherapy__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  animation: PersonCenteredTherapy__pulse 2s ease-in-out infinite;
+}
+
+.PersonCenteredTherapy__badgeIcon {
+  font-size: 18px;
+}
+
+.PersonCenteredTherapy__badgeText {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Title */
+.PersonCenteredTherapy__title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a202c;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  animation: PersonCenteredTherapy__fadeInUp 1s ease-out 0.2s both;
+}
+
+.PersonCenteredTherapy__titleHighlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+
+/* Decorative Line */
+.PersonCenteredTherapy__decorativeLine {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  animation: PersonCenteredTherapy__fadeInUp 1s ease-out 0.4s both;
+}
+
+.PersonCenteredTherapy__decorativeDot {
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.PersonCenteredTherapy__decorativeLine:hover .PersonCenteredTherapy__decorativeDot {
+  transform: scaleX(1.2);
+}
+
+/* Description */
+.PersonCenteredTherapy__description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 20px;
+  text-align: justify;
+  animation: PersonCenteredTherapy__fadeInUp 1s ease-out 0.6s both;
+}
+
+.PersonCenteredTherapy__descriptionSecondary {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #718096;
+  margin-bottom: 32px;
+  font-style: italic;
+  text-align: justify;
+  animation: PersonCenteredTherapy__fadeInUp 1s ease-out 0.8s both;
+}
+
+/* Features */
+.PersonCenteredTherapy__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  animation: PersonCenteredTherapy__fadeInUp 1s ease-out 1s both;
+}
+
+.PersonCenteredTherapy__feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.PersonCenteredTherapy__feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+}
+
+.PersonCenteredTherapy__featureIcon {
+  font-size: 28px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.PersonCenteredTherapy__featureText {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Image Section */
+.PersonCenteredTherapy__imageWrapper {
+  flex: 1;
+  min-width: 300px;
+  animation: PersonCenteredTherapy__fadeInRight 1s ease-out 0.4s both;
+}
+
+.PersonCenteredTherapy__imageContainer {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.PersonCenteredTherapy__imageContainer:hover {
+  transform: scale(1.02) rotate(1deg);
+  box-shadow: 0 25px 80px rgba(102, 126, 234, 0.25);
+}
+
+.PersonCenteredTherapy__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all 0.4s ease;
+}
+
+.PersonCenteredTherapy__imageContainer:hover .PersonCenteredTherapy__image {
+  transform: scale(1.05);
+}
+
+.PersonCenteredTherapy__imageGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Floating Card */
+.PersonCenteredTherapy__floatingCard {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 28px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  animation: PersonCenteredTherapy__float 3s ease-in-out infinite;
+}
+
+.PersonCenteredTherapy__floatingCardIcon {
+  font-size: 32px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.PersonCenteredTherapy__floatingCardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.PersonCenteredTherapy__floatingCardSubtitle {
+  font-size: 13px;
+  color: #718096;
+}
+
+/* Background Decorations */
+.PersonCenteredTherapy__bgDecoration {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  pointer-events: none;
+  animation: PersonCenteredTherapy__moveAround 20s ease-in-out infinite;
+}
+
+.PersonCenteredTherapy__bgDecoration--1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  top: -100px;
+  right: -100px;
+}
+
+.PersonCenteredTherapy__bgDecoration--2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  bottom: -80px;
+  left: -80px;
+  animation-delay: 5s;
+}
+
+.PersonCenteredTherapy__bgDecoration--3 {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 10s;
+}
+
+/* Animations */
+@keyframes PersonCenteredTherapy__fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes PersonCenteredTherapy__fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes PersonCenteredTherapy__fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes PersonCenteredTherapy__pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes PersonCenteredTherapy__float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes PersonCenteredTherapy__moveAround {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(30px, -30px);
+  }
+  66% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .PersonCenteredTherapy {
+    padding: 60px 0;
+  }
+
+  .PersonCenteredTherapy__wrapper {
+    gap: 40px;
+  }
+
+  .PersonCenteredTherapy__title {
+    font-size: 36px;
+  }
+
+  .PersonCenteredTherapy__description,
+  .PersonCenteredTherapy__descriptionSecondary {
+    font-size: 16px;
+  }
+
+  .PersonCenteredTherapy__features {
+    flex-direction: column;
+  }
+
+  .PersonCenteredTherapy__feature {
+    width: 100%;
+  }
+
+  .PersonCenteredTherapy__floatingCard {
+    left: 20px;
+    bottom: 20px;
+    padding: 16px 20px;
+  }
+
+  .PersonCenteredTherapy__bgDecoration {
+    display: none;
+  }
+}
