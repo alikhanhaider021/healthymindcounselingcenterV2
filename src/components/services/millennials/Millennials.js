@@ -2,6 +2,7 @@ import React from 'react';
 import './Millennials.css';
 import Image from 'next/image';
 
+
 const MillennialsSection = () => {
   return (
     <>
@@ -80,7 +81,7 @@ const MillennialsSection = () => {
                 <Image
                   alt="Millennials Innovation"
                   className="millennials-image"
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&auto=format&fit=crop"
+                  src="/images/Millennials.jpg"
                   width={350}
                   height={420}
                 />
