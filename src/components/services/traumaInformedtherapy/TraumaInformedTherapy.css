@@ -1,0 +1,334 @@
+        /* ====================================
+           Trauma-Informed Therapy Section CSS
+           ==================================== */
+
+        /* Section Container */
+        .TraumaInformedTherapy-section {
+          position: relative;
+          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+          padding: 100px 0;
+          overflow: hidden;
+        }
+
+        .TraumaInformedTherapy-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        .TraumaInformedTherapy-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 60px;
+        }
+
+        /* ====================================
+           Image Column Styles
+           ==================================== */
+
+        .TraumaInformedTherapy-imageCol {
+          flex: 1;
+          min-width: 300px;
+          position: relative;
+        }
+
+        .TraumaInformedTherapy-imageWrapper {
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+          transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .TraumaInformedTherapy-imageWrapper:hover {
+          transform: translateY(-10px) scale(1.02);
+        }
+
+        .TraumaInformedTherapy-image {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: transform 0.5s ease;
+        }
+
+        .TraumaInformedTherapy-imageWrapper:hover .TraumaInformedTherapy-image {
+          transform: scale(1.05);
+        }
+
+        .TraumaInformedTherapy-imageBorder {
+          position: absolute;
+          top: -15px;
+          left: -15px;
+          right: 15px;
+          bottom: 15px;
+          border: 3px solid #6366f1;
+          border-radius: 20px;
+          z-index: -1;
+          transition: all 0.5s ease;
+        }
+
+        .TraumaInformedTherapy-imageWrapper:hover .TraumaInformedTherapy-imageBorder {
+          top: -20px;
+          left: -20px;
+          right: 20px;
+          bottom: 20px;
+        }
+
+        /* ====================================
+           Content Column Styles
+           ==================================== */
+
+        .TraumaInformedTherapy-contentCol {
+          flex: 1;
+          min-width: 300px;
+        }
+
+        .TraumaInformedTherapy-content {
+          position: relative;
+          z-index: 2;
+        }
+
+        /* Decorative Element */
+        .TraumaInformedTherapy-decorative {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+
+        .TraumaInformedTherapy-dot {
+          width: 12px;
+          height: 12px;
+          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+          border-radius: 50%;
+          animation: TraumaInformedTherapy-pulse 2s infinite;
+        }
+
+        .TraumaInformedTherapy-line {
+          width: 60px;
+          height: 3px;
+          background: linear-gradient(90deg, #6366f1 0%, transparent 100%);
+        }
+
+        @keyframes TraumaInformedTherapy-pulse {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          50% {
+            transform: scale(1.2);
+            opacity: 0.8;
+          }
+        }
+
+        /* Heading */
+        .TraumaInformedTherapy-heading {
+          font-size: 48px;
+          font-weight: 700;
+          color: #1e293b;
+          margin-bottom: 15px;
+          line-height: 1.2;
+          background: linear-gradient(135deg, #1e293b 0%, #6366f1 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: TraumaInformedTherapy-fadeInUp 0.8s ease-out;
+        }
+
+        /* Subtitle */
+        .TraumaInformedTherapy-subtitle {
+          font-size: 18px;
+          font-weight: 500;
+          color: #6366f1;
+          margin-bottom: 30px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          animation: TraumaInformedTherapy-fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        /* Text Paragraphs */
+        .TraumaInformedTherapy-text {
+          font-size: 18px;
+          line-height: 1.8;
+          color: #475569;
+          margin-bottom: 25px;
+          text-align: justify;
+          animation: TraumaInformedTherapy-fadeInUp 0.8s ease-out 0.4s backwards;
+          position: relative;
+          padding-left: 20px;
+        }
+
+        .TraumaInformedTherapy-text::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 4px;
+          height: 100%;
+          background: linear-gradient(180deg, #6366f1 0%, transparent 100%);
+          border-radius: 2px;
+        }
+
+        /* CTA Button */
+        .TraumaInformedTherapy-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 16px 35px;
+          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+          color: white;
+          font-size: 16px;
+          font-weight: 600;
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+          position: relative;
+          overflow: hidden;
+          animation: TraumaInformedTherapy-fadeInUp 0.8s ease-out 0.6s backwards;
+          margin-top: 15px;
+        }
+
+        .TraumaInformedTherapy-btn::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+          transition: left 0.6s ease;
+        }
+
+        .TraumaInformedTherapy-btn:hover::before {
+          left: 100%;
+        }
+
+        .TraumaInformedTherapy-btn:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+        }
+
+        .TraumaInformedTherapy-btn:active {
+          transform: translateY(-1px);
+        }
+
+        .TraumaInformedTherapy-btnIcon {
+          width: 20px;
+          height: 20px;
+          transition: transform 0.3s ease;
+        }
+
+        .TraumaInformedTherapy-btn:hover .TraumaInformedTherapy-btnIcon {
+          transform: translateX(5px);
+        }
+
+        /* ====================================
+           Background Decorations
+           ==================================== */
+
+        .TraumaInformedTherapy-bgDecor {
+          position: absolute;
+          border-radius: 50%;
+          opacity: 0.1;
+          z-index: 0;
+        }
+
+        .TraumaInformedTherapy-bgDecor1 {
+          width: 400px;
+          height: 400px;
+          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+          top: -100px;
+          right: -100px;
+          animation: TraumaInformedTherapy-float 8s ease-in-out infinite;
+        }
+
+        .TraumaInformedTherapy-bgDecor2 {
+          width: 300px;
+          height: 300px;
+          background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+          bottom: -80px;
+          left: -80px;
+          animation: TraumaInformedTherapy-float 10s ease-in-out infinite reverse;
+        }
+
+        /* ====================================
+           Animations
+           ==================================== */
+
+        @keyframes TraumaInformedTherapy-fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes TraumaInformedTherapy-float {
+          0%, 100% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-30px) rotate(5deg);
+          }
+        }
+
+        /* ====================================
+           Responsive Design
+           ==================================== */
+
+        @media (max-width: 768px) {
+          .TraumaInformedTherapy-section {
+            padding: 60px 0;
+          }
+
+          .TraumaInformedTherapy-wrapper {
+            gap: 40px;
+          }
+
+          .TraumaInformedTherapy-heading {
+            font-size: 36px;
+          }
+
+          .TraumaInformedTherapy-subtitle {
+            font-size: 16px;
+          }
+
+          .TraumaInformedTherapy-text {
+            font-size: 16px;
+            padding-left: 15px;
+          }
+
+          .TraumaInformedTherapy-btn {
+            padding: 14px 28px;
+            font-size: 15px;
+          }
+
+          .TraumaInformedTherapy-imageBorder {
+            top: -10px;
+            left: -10px;
+            right: 10px;
+            bottom: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .TraumaInformedTherapy-heading {
+            font-size: 28px;
+          }
+
+          .TraumaInformedTherapy-text {
+            font-size: 15px;
+          }
+
+          .TraumaInformedTherapy-btn {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+     

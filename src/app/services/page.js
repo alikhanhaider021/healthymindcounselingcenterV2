@@ -11,6 +11,16 @@ import React from 'react'
 import EMDRSection from '@/components/services/EMDRsection/EMDRSection'
 import PersonCenteredTherapy from '@/components/services/personcenteredtherapy/PersonCenteredTherapy'
 import SolutionFocusedTherapy from '@/components/services/solutionfocusedtherapy/SolutionFocusedTherapy'
+import CognitiveBehavioralTherapy from '@/components/services/cognitivebehavioraltherapy/CognitiveBehavioralTherapy'
+import TraumaInformedTherapy from '@/components/services/traumaInformedtherapy/TraumaInformedTherapy'
+import MillennialsSection from '@/components/services/millennials/Millennials'
+import GenzSection from '@/components/services/genz/Genz'
+import LGBTQIASection from '@/components/services/LGBTQIa/LGBTQIA'
+import VegansSection from '@/components/services/vegans/Vegans'
+import SpiritualCounselingSection from '@/components/services/spiritualcounseling/Spiritualcounseling'
+import POCSection from '@/components/services/poc/POC'
+import HoursOfOperation from '@/components/services/cardtable/CardTable'
+import EvaluationsReferrals from '@/components/services/referrals/Referrals'
 
 const services = () => {
   return (
@@ -26,6 +36,16 @@ const services = () => {
 <EMDRSection/>
 <PersonCenteredTherapy/>
 <SolutionFocusedTherapy/>
+<CognitiveBehavioralTherapy/>
+<TraumaInformedTherapy/>
+<MillennialsSection/>
+<GenzSection/>
+<LGBTQIASection/>
+<VegansSection/>
+<SpiritualCounselingSection/>
+<POCSection/>
+<EvaluationsReferrals/>
+<HoursOfOperation/>
 </>
   )
 }

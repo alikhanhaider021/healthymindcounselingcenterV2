@@ -108,7 +108,7 @@
           max-width: 600px;
         }
 
-        .cta-button {
+        /* .cta-button {
           background: white;
           color: #2B6FDB;
           padding: 16px 40px;
@@ -125,7 +125,7 @@
           background: #f0f0f0;
           transform: translateY(-2px);
           box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
+        } */
 
         .nav-arrow {
           position: absolute;

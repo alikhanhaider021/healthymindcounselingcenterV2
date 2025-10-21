@@ -104,6 +104,28 @@ const HeaderNavbar = () => {
                   <Link href="/cbt" role="menuitem">Cognitive-Behavioral Therapy</Link>
                   <Link href="/person-centered" role="menuitem">Person-Centered Therapy</Link>
                   <Link href="/solution-focused" role="menuitem">Solution Focused Therapy</Link>
+
+                   <Link href="/emdr" role="menuitem">Trauma-Informed Therapy</Link>
+                  <Link href="/cbt" role="menuitem">Prenatal and Post Partum Pregnancy</Link>
+                  <Link href="/person-centered" role="menuitem">Women’s Issues</Link>
+                  <Link href="/solution-focused" role="menuitem">Spirituality Counseling</Link>
+
+                   <Link href="/emdr" role="menuitem">Depression</Link>
+                  <Link href="/cbt" role="menuitem">Anxiety</Link>
+                  <Link href="/person-centered" role="menuitem">Post-Traumatic Stress</Link>
+                  <Link href="/solution-focused" role="menuitem">Abuse</Link>
+
+                     <Link href="/emdr" role="menuitem">Mood Disorders</Link>
+                  <Link href="/cbt" role="menuitem">Self-Harm</Link>
+                  <Link href="/person-centered" role="menuitem">Self-Esteem</Link>
+                  <Link href="/solution-focused" role="menuitem">Young Adults</Link>
+
+                   <Link href="/emdr" role="menuitem">Multicultural / POC</Link>
+                  <Link href="/cbt" role="menuitem">LGBTQIA+</Link>
+                  <Link href="/person-centered" role="menuitem">Spirituality</Link>
+                  <Link href="/solution-focused" role="menuitem">Family systems</Link>
+                  <Link href="/emdr" role="menuitem">Vegan</Link>
+               
                 </div>
               </div>
 

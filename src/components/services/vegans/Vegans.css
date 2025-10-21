@@ -1,0 +1,271 @@
+
+        /* ============================================
+           VEGANS SECTION - CORE CSS STYLES
+           ============================================ */
+
+        /* Main Section Container */
+        .vegans-section {
+          position: relative;
+          background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+          padding: 5rem 0;
+          overflow: hidden;
+        }
+
+        /* Container */
+        .vegans-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+
+        /* Content Wrapper */
+        .vegans-content-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 3rem;
+        }
+
+        /* ============================================
+           IMAGE COLUMN STYLES
+           ============================================ */
+
+        .vegans-image-column {
+          flex: 1;
+          min-width: 300px;
+          position: relative;
+        }
+
+        .vegans-image-wrapper {
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+          transform: translateY(0);
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .vegans-image-wrapper:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        .vegans-image {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: transform 0.4s ease;
+        }
+
+        .vegans-image-wrapper:hover .vegans-image {
+          transform: scale(1.05);
+        }
+
+        .vegans-image-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            135deg,
+            rgba(76, 175, 80, 0.1) 0%,
+            rgba(139, 195, 74, 0.1) 100%
+          );
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+
+        .vegans-image-wrapper:hover .vegans-image-overlay {
+          opacity: 1;
+        }
+
+        /* ============================================
+           TEXT COLUMN STYLES
+           ============================================ */
+
+        .vegans-text-column {
+          flex: 1;
+          min-width: 300px;
+        }
+
+        .vegans-text-wrapper {
+          padding: 0 1rem;
+        }
+
+        /* Heading Styles */
+        .vegans-heading-container {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 2rem;
+        }
+
+        .vegans-heading-decoration {
+          width: 60px;
+          height: 4px;
+          background: linear-gradient(90deg, #4caf50 0%, #8bc34a 100%);
+          border-radius: 2px;
+          animation: vegans-slide-in 1s ease-out;
+        }
+
+        @keyframes vegans-slide-in {
+          from {
+            width: 0;
+            opacity: 0;
+          }
+          to {
+            width: 60px;
+            opacity: 1;
+          }
+        }
+
+        .vegans-heading {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #2e7d32;
+          margin: 0;
+          position: relative;
+          animation: vegans-fade-in-up 0.8s ease-out;
+        }
+
+        @keyframes vegans-fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Paragraph Styles */
+        .vegans-paragraph {
+          font-size: 1.125rem;
+          line-height: 1.8;
+          color: #546e7a;
+          margin-bottom: 1.5rem;
+          text-align: justify;
+          position: relative;
+          padding-left: 1.5rem;
+          animation: vegans-fade-in-up 0.8s ease-out;
+          animation-delay: 0.2s;
+          opacity: 0;
+          animation-fill-mode: forwards;
+        }
+
+        .vegans-paragraph:first-of-type {
+          animation-delay: 0.3s;
+        }
+
+        .vegans-paragraph:last-of-type {
+          animation-delay: 0.4s;
+        }
+
+        .vegans-paragraph::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 4px;
+          height: calc(100% - 16px);
+          background: linear-gradient(180deg, #4caf50 0%, #8bc34a 100%);
+          border-radius: 2px;
+          opacity: 0.6;
+        }
+
+        /* ============================================
+           CTA BUTTON STYLES
+           ============================================ */
+
+       
+
+        /* ============================================
+           DECORATIVE BACKGROUND ELEMENTS
+           ============================================ */
+
+        .vegans-bg-decoration {
+          position: absolute;
+          border-radius: 50%;
+          opacity: 0.1;
+          z-index: 0;
+        }
+
+        .vegans-bg-decoration-1 {
+          width: 400px;
+          height: 400px;
+          background: linear-gradient(135deg, #4caf50, #8bc34a);
+          top: -100px;
+          right: -100px;
+          animation: vegans-float 8s ease-in-out infinite;
+        }
+
+        .vegans-bg-decoration-2 {
+          width: 300px;
+          height: 300px;
+          background: linear-gradient(135deg, #66bb6a, #aed581);
+          bottom: -80px;
+          left: -80px;
+          animation: vegans-float 6s ease-in-out infinite;
+          animation-delay: 1s;
+        }
+
+        @keyframes vegans-float {
+          0%, 100% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(5deg);
+          }
+        }
+
+        /* ============================================
+           RESPONSIVE STYLES
+           ============================================ */
+
+        @media (max-width: 768px) {
+          .vegans-section {
+            padding: 3rem 0;
+          }
+
+          .vegans-content-wrapper {
+            flex-direction: column;
+            gap: 2rem;
+          }
+
+          .vegans-heading {
+            font-size: 2rem;
+          }
+
+          .vegans-paragraph {
+            font-size: 1rem;
+            padding-left: 1rem;
+          }
+
+          .vegans-cta-button {
+            width: 100%;
+            justify-content: center;
+          }
+
+          .vegans-bg-decoration-1,
+          .vegans-bg-decoration-2 {
+            display: none;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .vegans-heading {
+            font-size: 1.75rem;
+          }
+
+          .vegans-heading-decoration {
+            width: 40px;
+          }
+
+          .vegans-cta-button {
+            padding: 0.875rem 1.5rem;
+            font-size: 0.9rem;
+          }
+        }
+      

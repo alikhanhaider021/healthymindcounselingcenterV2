@@ -1,0 +1,188 @@
+
+        .referrals-wrapper {
+          position: relative;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          padding: 80px 0;
+          overflow: hidden;
+        }
+
+        .referrals-wrapper::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: 
+            radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 50%);
+          animation: referrals-float 20s ease-in-out infinite;
+        }
+
+        @keyframes referrals-float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-20px); }
+        }
+
+        .referrals-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 24px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .referrals-content-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+
+        .referrals-main-card {
+          background: white;
+          border-radius: 24px;
+          padding: 48px;
+          box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+          width: 100%;
+          max-width: 1100px;
+          margin: 0 auto;
+          position: relative;
+          overflow: hidden;
+          animation: referrals-slideUp 0.8s ease-out;
+        }
+
+        @keyframes referrals-slideUp {
+          from {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .referrals-main-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 6px;
+          background: linear-gradient(90deg, 
+            #667eea 0%, 
+            #764ba2 25%, 
+            #f093fb 50%, 
+            #4facfe 75%, 
+            #00f2fe 100%);
+          animation: referrals-shimmer 3s linear infinite;
+          background-size: 200% 100%;
+        }
+
+        @keyframes referrals-shimmer {
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+
+        .referrals-header {
+          position: relative;
+        }
+
+        .referrals-title-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-bottom: 24px;
+        }
+
+        .referrals-icon-badge {
+          width: 60px;
+          height: 60px;
+          border-radius: 16px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+          animation: referrals-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes referrals-pulse {
+          0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4); }
+          50% { transform: scale(1.05); box-shadow: 0 12px 32px rgba(102, 126, 234, 0.6); }
+        }
+
+        .referrals-title {
+          font-size: 2.5rem;
+          font-weight: 800;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin: 0;
+          line-height: 1.2;
+          letter-spacing: -0.5px;
+        }
+
+        .referrals-description {
+          font-size: 1.125rem;
+          line-height: 1.8;
+          color: #4a5568;
+          margin: 0;
+          text-align: justify;
+          position: relative;
+          padding-left: 24px;
+          border-left: 4px solid #667eea;
+          background: linear-gradient(90deg, rgba(102, 126, 234, 0.05) 0%, transparent 100%);
+          padding: 24px;
+          border-radius: 12px;
+        }
+
+        .referrals-decorative-circle {
+          position: absolute;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+          pointer-events: none;
+        }
+
+        .referrals-circle-1 {
+          width: 300px;
+          height: 300px;
+          top: -100px;
+          right: -100px;
+          animation: referrals-float 15s ease-in-out infinite;
+        }
+
+        .referrals-circle-2 {
+          width: 200px;
+          height: 200px;
+          bottom: -50px;
+          left: -50px;
+          animation: referrals-float 12s ease-in-out infinite reverse;
+        }
+
+        @media (max-width: 768px) {
+          .referrals-wrapper {
+            padding: 48px 0;
+          }
+
+          .referrals-main-card {
+            padding: 32px 24px;
+          }
+
+          .referrals-title {
+            font-size: 1.875rem;
+          }
+
+          .referrals-description {
+            font-size: 1rem;
+            padding: 20px;
+          }
+
+          .referrals-title-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+     

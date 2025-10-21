@@ -1,0 +1,216 @@
+
+        :root{
+          --Genz-bg-1: #0f172a;
+          --Genz-accent-1: #60a5fa;
+          --Genz-accent-2: #6ee7b7;
+          --Genz-card: rgba(255,255,255,0.06);
+          --Genz-glow: 0 10px 30px rgba(32,41,58,0.6);
+          --Genz-radius: 18px;
+          --Genz-max: 1100px;
+        }
+
+        .Genz-section{
+          background: linear-gradient(180deg, var(--Genz-bg-1) 0%, #071033 60%);
+          padding: 4.5rem 1rem;
+          color: white;
+          font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        .Genz-container{
+          max-width: var(--Genz-max);
+          margin: 0 auto;
+        }
+
+        .Genz-grid{
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          align-items: center;
+        }
+
+        .Genz-media{
+          order: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+        }
+
+        .Genz-illustration{
+          width: 100%;
+          max-width: 520px;
+          height: auto;
+          border-radius: var(--Genz-radius);
+          box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3), 0 0 80px rgba(236, 72, 153, 0.2);
+          transform-origin: center center;
+          animation: Genz-float 8s ease-in-out infinite;
+        }
+
+        .Genz-illustration .phone-icon {
+          animation: phone-pulse 3s ease-in-out infinite;
+          transform-origin: center;
+        }
+
+        .Genz-illustration .notification-icon {
+          animation: notification-pop 2s ease-in-out infinite;
+          transform-origin: center;
+        }
+
+        .Genz-illustration .heart-icon {
+          animation: heart-beat 1.5s ease-in-out infinite;
+          transform-origin: center;
+        }
+
+        .Genz-illustration .chat-icon {
+          animation: chat-bounce 2.5s ease-in-out infinite;
+          transform-origin: center;
+        }
+
+        @keyframes phone-pulse {
+          0%, 100% { transform: translate(105px, 80px) scale(1); }
+          50% { transform: translate(105px, 80px) scale(1.05); }
+        }
+
+        @keyframes notification-pop {
+          0%, 100% { transform: translate(220px, 100px) scale(1); }
+          50% { transform: translate(220px, 100px) scale(1.2); }
+        }
+
+        @keyframes heart-beat {
+          0%, 100% { transform: translate(80px, 220px) scale(1); }
+          25% { transform: translate(80px, 220px) scale(1.1); }
+          50% { transform: translate(80px, 220px) scale(1); }
+          75% { transform: translate(80px, 220px) scale(1.1); }
+        }
+
+        @keyframes chat-bounce {
+          0%, 100% { transform: translate(210px, 200px) translateY(0); }
+          50% { transform: translate(210px, 200px) translateY(-8px); }
+        }
+
+        @keyframes Genz-float{
+          0% { transform: translateY(0) rotate(-0.4deg); }
+          50% { transform: translateY(-8px) rotate(0.7deg); }
+          100% { transform: translateY(0) rotate(-0.4deg); }
+        }
+
+        .Genz-card{
+          order: 2;
+          background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+          padding: 2.2rem;
+          border-radius: 16px;
+          backdrop-filter: blur(6px);
+          box-shadow: var(--Genz-glow);
+          border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .Genz-badge{
+          display: inline-block;
+          padding: 0.35rem 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          background: linear-gradient(90deg, var(--Genz-accent-2), var(--Genz-accent-1));
+          color: #05263b;
+          border-radius: 999px;
+          font-size: 0.85rem;
+        }
+
+        .Genz-title{
+          font-size: 2.25rem;
+          margin: 0.8rem 0 0.6rem 0;
+          line-height: 1.05;
+          letter-spacing: -0.02em;
+        }
+
+        .Genz-body{
+          font-size: 1.05rem;
+          color: rgba(255,255,255,0.92);
+          margin-bottom: 1rem;
+          line-height: 1.7;
+        }
+
+        .Genz-list{
+          margin: 1rem 0 1.2rem 0;
+          padding-left: 1.05rem;
+          color: rgba(255,255,255,0.9);
+        }
+
+        .Genz-list li{
+          margin-bottom: 0.6rem;
+        }
+
+        .Genz-cta-row{
+          display: flex;
+          gap: 0.8rem;
+          margin-top: 1rem;
+          flex-wrap: wrap;
+        }
+
+        .Genz-cta{
+          display: inline-flex;
+          align-items: center;
+          padding: 0.8rem 1.05rem;
+          border-radius: 12px;
+          font-weight: 600;
+          text-decoration: none;
+          background: linear-gradient(90deg, var(--Genz-accent-2), var(--Genz-accent-1));
+          color: #05263b;
+          box-shadow: 0 6px 18px rgba(96,165,250,0.16);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+        }
+
+        .Genz-cta:hover{ 
+          transform: translateY(-4px); 
+          box-shadow: 0 18px 40px rgba(96,165,250,0.18); 
+        }
+
+        .Genz-ghost{
+          display: inline-flex;
+          align-items: center;
+          padding: 0.7rem 1rem;
+          border-radius: 12px;
+          border: 1px solid rgba(255,255,255,0.08);
+          color: rgba(255,255,255,0.95);
+          text-decoration: none;
+          background: transparent;
+          transition: background 180ms ease, color 180ms ease;
+        }
+
+        .Genz-ghost:hover{
+          background: rgba(255,255,255,0.03);
+        }
+
+        .Genz-note{
+          margin-top: 1rem;
+          font-size: 0.9rem;
+          color: rgba(255,255,255,0.6);
+        }
+
+        @media (min-width: 768px){
+          .Genz-grid{ 
+            grid-template-columns: 480px 1fr; 
+            gap: 3rem; 
+          }
+          .Genz-media{ order: 1; }
+          .Genz-card{ order: 2; }
+        }
+
+        @media (min-width: 1024px){
+          .Genz-title{ font-size: 2.6rem; }
+          .Genz-illustration{ max-width: 560px; }
+        }
+
+        .Genz-cta:focus, .Genz-ghost:focus{
+          outline: 3px solid rgba(110,231,183,0.14);
+          outline-offset: 3px;
+          box-shadow: 0 6px 30px rgba(110,231,183,0.06);
+        }
+
+        .Genz-section .Genz-card p, .Genz-section .Genz-card li{ 
+          transition: color 200ms ease; 
+        }
+        
+        .Genz-section .Genz-card:hover p{ 
+          color: rgba(255,255,255,0.96); 
+        }
+     

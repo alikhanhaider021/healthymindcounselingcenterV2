@@ -1,0 +1,400 @@
+
+        /* ============================================
+           SPIRITUAL COUNSELING SECTION - CORE CSS
+           ============================================ */
+
+        /* Main Section Container */
+        .spiritualcounseling-section {
+          position: relative;
+          background: linear-gradient(135deg, #faf3f0 0%, #e8e4f3 100%);
+          padding: 5rem 0;
+          overflow: hidden;
+        }
+
+        /* Container */
+        .spiritualcounseling-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+
+        /* Content Wrapper */
+        .spiritualcounseling-content-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 3rem;
+        }
+
+        /* ============================================
+           IMAGE COLUMN STYLES
+           ============================================ */
+
+        .spiritualcounseling-image-column {
+          flex: 1;
+          min-width: 300px;
+          position: relative;
+        }
+
+        .spiritualcounseling-image-wrapper {
+          position: relative;
+          border-radius: 25px;
+          overflow: hidden;
+          box-shadow: 0 25px 70px rgba(123, 97, 255, 0.2);
+          transform: translateY(0);
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .spiritualcounseling-image-wrapper::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: linear-gradient(
+            45deg,
+            transparent,
+            rgba(123, 97, 255, 0.1),
+            transparent
+          );
+          transform: rotate(45deg);
+          transition: all 0.6s ease;
+        }
+
+        .spiritualcounseling-image-wrapper:hover::before {
+          left: 100%;
+        }
+
+        .spiritualcounseling-image-wrapper:hover {
+          transform: translateY(-15px) scale(1.02);
+          box-shadow: 0 35px 90px rgba(123, 97, 255, 0.3);
+        }
+
+        .spiritualcounseling-image {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: transform 0.5s ease;
+        }
+
+        .spiritualcounseling-image-wrapper:hover .spiritualcounseling-image {
+          transform: scale(1.08);
+        }
+
+        .spiritualcounseling-image-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(
+            circle at center,
+            rgba(123, 97, 255, 0.15) 0%,
+            rgba(186, 104, 200, 0.1) 100%
+          );
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+
+        .spiritualcounseling-image-wrapper:hover .spiritualcounseling-image-overlay {
+          opacity: 1;
+        }
+
+        /* ============================================
+           TEXT COLUMN STYLES
+           ============================================ */
+
+        .spiritualcounseling-text-column {
+          flex: 1;
+          min-width: 300px;
+        }
+
+        .spiritualcounseling-text-wrapper {
+          padding: 0 1rem;
+        }
+
+        /* Heading Styles */
+        .spiritualcounseling-heading-container {
+          margin-bottom: 2rem;
+          position: relative;
+        }
+
+        .spiritualcounseling-heading {
+          font-size: 2.75rem;
+          font-weight: 800;
+          background: linear-gradient(135deg, #5e35b1 0%, #ba68c8 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin: 0;
+          position: relative;
+          line-height: 1.2;
+          animation: spiritualcounseling-fade-in-up 0.8s ease-out;
+        }
+
+        .spiritualcounseling-heading-underline {
+          width: 100px;
+          height: 4px;
+          background: linear-gradient(90deg, #7b61ff 0%, #ba68c8 100%);
+          border-radius: 2px;
+          margin-top: 1rem;
+          animation: spiritualcounseling-expand 1s ease-out;
+        }
+
+        @keyframes spiritualcounseling-expand {
+          from {
+            width: 0;
+            opacity: 0;
+          }
+          to {
+            width: 100px;
+            opacity: 1;
+          }
+        }
+
+        @keyframes spiritualcounseling-fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Paragraph Styles */
+        .spiritualcounseling-paragraph {
+          font-size: 1.125rem;
+          line-height: 1.9;
+          color: #5a5a72;
+          margin-bottom: 1.5rem;
+          text-align: justify;
+          position: relative;
+          padding: 1.5rem;
+          background: white;
+          border-radius: 15px;
+          box-shadow: 0 5px 20px rgba(123, 97, 255, 0.08);
+          animation: spiritualcounseling-fade-in-up 0.8s ease-out;
+          animation-delay: 0.3s;
+          opacity: 0;
+          animation-fill-mode: forwards;
+          border-left: 4px solid transparent;
+          border-image: linear-gradient(180deg, #7b61ff 0%, #ba68c8 100%) 1;
+          transition: all 0.3s ease;
+        }
+
+        .spiritualcounseling-paragraph:hover {
+          transform: translateX(5px);
+          box-shadow: 0 8px 30px rgba(123, 97, 255, 0.15);
+        }
+
+        /* ============================================
+           FLOATING PARTICLES ANIMATION
+           ============================================ */
+
+        .spiritualcounseling-particle {
+          position: absolute;
+          border-radius: 50%;
+          pointer-events: none;
+        }
+
+        .spiritualcounseling-particle-1 {
+          width: 8px;
+          height: 8px;
+          background: linear-gradient(135deg, #7b61ff, #ba68c8);
+          top: 15%;
+          left: 15%;
+          animation: spiritualcounseling-float-particle 6s ease-in-out infinite;
+        }
+
+        .spiritualcounseling-particle-2 {
+          width: 12px;
+          height: 12px;
+          background: linear-gradient(135deg, #ba68c8, #ce93d8);
+          top: 70%;
+          right: 20%;
+          animation: spiritualcounseling-float-particle 8s ease-in-out infinite;
+          animation-delay: 2s;
+        }
+
+        .spiritualcounseling-particle-3 {
+          width: 6px;
+          height: 6px;
+          background: linear-gradient(135deg, #9575cd, #b39ddb);
+          bottom: 25%;
+          left: 25%;
+          animation: spiritualcounseling-float-particle 7s ease-in-out infinite;
+          animation-delay: 4s;
+        }
+
+        .spiritualcounseling-particle-4 {
+          width: 10px;
+          height: 10px;
+          background: linear-gradient(135deg, #7b61ff, #9575cd);
+          top: 40%;
+          right: 10%;
+          animation: spiritualcounseling-float-particle 9s ease-in-out infinite;
+          animation-delay: 1s;
+        }
+
+        @keyframes spiritualcounseling-float-particle {
+          0%, 100% {
+            transform: translateY(0) translateX(0) scale(1);
+            opacity: 0.7;
+          }
+          25% {
+            transform: translateY(-30px) translateX(20px) scale(1.3);
+            opacity: 1;
+          }
+          50% {
+            transform: translateY(-60px) translateX(-10px) scale(1);
+            opacity: 0.5;
+          }
+          75% {
+            transform: translateY(-30px) translateX(-30px) scale(1.2);
+            opacity: 0.9;
+          }
+        }
+
+        /* ============================================
+           SHIMMER EFFECT ON TEXT
+           ============================================ */
+
+        .spiritualcounseling-paragraph::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(123, 97, 255, 0.1),
+            transparent
+          );
+          animation: spiritualcounseling-shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes spiritualcounseling-shimmer {
+          0% {
+            left: -100%;
+          }
+          50%, 100% {
+            left: 100%;
+          }
+        }
+
+        /* ============================================
+           DECORATIVE BACKGROUND ELEMENTS
+           ============================================ */
+
+        .spiritualcounseling-bg-decoration {
+          position: absolute;
+          z-index: 0;
+          opacity: 0.08;
+        }
+
+        .spiritualcounseling-bg-decoration-1 {
+          width: 500px;
+          height: 500px;
+          background: radial-gradient(circle, #7b61ff, #ba68c8);
+          border-radius: 50%;
+          top: -150px;
+          right: -150px;
+          animation: spiritualcounseling-float-rotate 12s ease-in-out infinite;
+          filter: blur(60px);
+        }
+
+        .spiritualcounseling-bg-decoration-2 {
+          width: 400px;
+          height: 400px;
+          background: radial-gradient(circle, #ba68c8, #ce93d8);
+          border-radius: 50%;
+          bottom: -100px;
+          left: -100px;
+          animation: spiritualcounseling-float-rotate 10s ease-in-out infinite;
+          animation-delay: 2s;
+          filter: blur(60px);
+        }
+
+        .spiritualcounseling-bg-decoration-3 {
+          width: 350px;
+          height: 350px;
+          background: radial-gradient(circle, #9575cd, #7b61ff);
+          border-radius: 50%;
+          top: 40%;
+          right: 5%;
+          animation: spiritualcounseling-float-rotate 11s ease-in-out infinite;
+          animation-delay: 1s;
+          filter: blur(60px);
+        }
+
+        @keyframes spiritualcounseling-float-rotate {
+          0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          33% {
+            transform: translate(30px, -30px) rotate(120deg);
+          }
+          66% {
+            transform: translate(-20px, 20px) rotate(240deg);
+          }
+        }
+
+        /* ============================================
+           RESPONSIVE STYLES
+           ============================================ */
+
+        @media (max-width: 768px) {
+          .spiritualcounseling-section {
+            padding: 3rem 0;
+          }
+
+          .spiritualcounseling-content-wrapper {
+            flex-direction: column;
+            gap: 2rem;
+          }
+
+          .spiritualcounseling-heading {
+            font-size: 2rem;
+          }
+
+          .spiritualcounseling-paragraph {
+            font-size: 1rem;
+            padding: 1rem;
+          }
+
+          .spiritualcounseling-cta-button {
+            width: 100%;
+            justify-content: center;
+          }
+
+          .spiritualcounseling-bg-decoration-1,
+          .spiritualcounseling-bg-decoration-2,
+          .spiritualcounseling-bg-decoration-3,
+          .spiritualcounseling-particle-1,
+          .spiritualcounseling-particle-2,
+          .spiritualcounseling-particle-3,
+          .spiritualcounseling-particle-4 {
+            display: none;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .spiritualcounseling-heading {
+            font-size: 1.75rem;
+          }
+
+          .spiritualcounseling-heading-underline {
+            width: 70px;
+          }
+
+          .spiritualcounseling-cta-button {
+            padding: 0.875rem 1.5rem;
+            font-size: 0.9rem;
+          }
+        }
+      

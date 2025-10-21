@@ -119,7 +119,54 @@ export default function BannnerSliders() {
                 {slides[currentSlide].description}
               </p>
               
-              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 flex items-center gap-3 group">
+              <button
+  onClick={() => {}}
+  aria-label={slides[currentSlide].buttonText}
+  className="bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm tracking-wide transition-all duration-300 inline-flex items-center justify-center rounded-full shadow-md"
+  // Inline styles used to avoid being overridden by other CSS
+  style={{
+    padding: "12px 26px",   // vertical 12px, horizontal 26px (adjust if needed)
+    gap: "14px",
+    width: "auto",
+    minWidth: "fit-content",
+    alignItems: "center",
+    marginTop: "10px",
+  }}
+>
+  <span style={{ display: "inline-block", lineHeight: 1 }}>
+    {slides[currentSlide].buttonText}
+  </span>
+
+  {/* white circle with explicit margin so purple BG never touches it */}
+  <span
+    className="rounded-full flex items-center justify-center transition-transform"
+    style={{
+      width: 36,
+      height: 36,
+      marginLeft: 6,
+      background: "#fff",
+      flex: "0 0 36px",
+    }}
+  >
+    <svg
+      className="w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      style={{ color: "#6d28d9" }} // purple-600 (arrow color)
+      aria-hidden="true"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={3}
+        d="M9 5l7 7-7 7"
+      />
+    </svg>
+  </span>
+</button>
+
+              {/* <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 flex items-center gap-3 group">
                 {slides[currentSlide].buttonText}
                 <span className="w-6 h-6 bg-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
                   <svg 
@@ -136,7 +183,7 @@ export default function BannnerSliders() {
                     />
                   </svg>
                 </span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
