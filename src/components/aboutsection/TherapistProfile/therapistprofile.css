@@ -3,10 +3,11 @@
 /* ========== Section & Container ========== */
 .therapist-section {
   position: relative;
-  padding: 4rem 0;
+  padding: 8rem 0;
   background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 50%, #eff6ff 100%);
   min-height: 100vh;
 }
+
 
 .therapist-container {
   max-width: 1280px;
@@ -50,7 +51,9 @@
   font-size: 1.25rem;
   color: #4b5563;
 }
-
+.therapist-approach-text{
+      font-size: 1.125rem;
+}
 .therapist-divider {
   width: 6rem;
   height: 0.25rem;
@@ -213,35 +216,81 @@
 
 /* ========== Responsive Design ========== */
 
+@media (max-width: 639px) {
+  .therapist-section {
+    padding: 2rem 0;
+  }
+
+  .therapist-bio-card {
+    padding: 0.6rem;
+  }
+
+  .therapist-approach-box {
+
+    padding: 0.6rem;
+    margin: 0rem 0;
+  }
+  .therapist-bio-title {
+   
+    margin-bottom: 1rem;
+
+}
+.therapist-main-grid {
+   
+    margin-bottom: 1rem;}
+}
+@media (max-width: 439px) {
+
+  .therapist-specialty-card {
+    padding: 0.6rem;
+  }
+
+  .therapist-container {
+
+    padding: 0 0.6rem;
+  }
+
+  .therapist-bio-paragraph {
+    font-size: 0.9rem;
+  }
+.therapist-approach-text{
+   
+  font-size: 0.9rem;
+}
+}
+
+
 /* Tablet & Above */
 @media (min-width: 640px) {
+
   .therapist-specialty-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 1rem;
   }
+
+  
+    
 }
 
 @media (min-width: 768px) {
-  .therapist-section {
-    padding: 5rem 0;
-  }
-  
+
+
   .therapist-header {
     margin-bottom: 4rem;
   }
-  
+
   .therapist-title {
     font-size: 3rem;
   }
-  
+
   .therapist-main-grid {
     margin-bottom: 4rem;
   }
-  
-  .therapist-specialty-card {
+
+  /* .therapist-specialty-card {
     padding: 2.5rem;
-  }
-  
+  } */
+
   .therapist-bio-card {
     padding: 3rem;
   }
@@ -253,11 +302,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
-  
+
   .therapist-specialty-title {
     font-size: 2rem;
   }
-  
+
   .therapist-bio-title {
     font-size: 2rem;
   }
@@ -276,6 +325,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

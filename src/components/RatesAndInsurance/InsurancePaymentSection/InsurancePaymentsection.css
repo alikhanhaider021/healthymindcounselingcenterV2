@@ -12,7 +12,8 @@
         .insurance-payment-wrapper {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 80px 20px;
+          padding: 0px 20px;
+          padding-bottom: 20px;
        
 
         }
@@ -32,7 +33,7 @@
           font-size: 1.125rem;
           line-height: 1.8;
           color: #64748b;
-          margin-bottom: 48px;
+          /* margin-bottom: 48px; */
         }
 
         .insurance-provider-highlight {
@@ -47,8 +48,8 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 60px;
-          margin: 60px 0;
+          gap: 30px;
+          margin: 20px 0;
           flex-wrap: wrap;
         }
 
@@ -78,10 +79,11 @@
         }
 
         .insurance-examination-prompt {
-          font-size: 1.125rem;
-          font-weight: 600;
+          font-size: 2.125rem;
+          font-weight: 700;
           color: #1e293b;
           margin: 60px 0 32px 0;
+          text-align: center;
         }
 
         .insurance-questions-list {
@@ -133,14 +135,14 @@
         .payment-section-divider {
           height: 2px;
           background: linear-gradient(90deg, transparent 0%, #667eea 50%, transparent 100%);
-          margin: 80px 0 60px 0;
+          margin: 20px 0 20px 0;
         }
 
         .payment-section-header {
           font-size: 2.5rem;
           font-weight: 700;
           color: #1e293b;
-          margin-bottom: 24px;
+          margin-bottom: 14px;
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -152,15 +154,19 @@
           line-height: 1.8;
           color: #64748b;
           background: white;
-          padding: 32px;
+          padding: 20px;
           border-radius: 16px;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
           border-left: 4px solid #667eea;
+         
         }
 
         @media (max-width: 768px) {
+          .insurance-section-header {
+                margin-bottom: 8px;}
           .insurance-payment-wrapper {
-            padding: 40px 16px;
+            padding: 0px 6px;
+            padding-bottom: 20px;
           }
 
           .insurance-section-header,
@@ -169,7 +175,7 @@
           }
 
           .insurance-logos-container {
-            gap: 30px;
+            gap: 20px;
           }
 
           .insurance-logo-card {
@@ -178,7 +184,7 @@
           }
 
           .insurance-question-item {
-            padding: 20px;
+            padding: 10px;
           }
 
           .insurance-question-icon-badge {
@@ -186,5 +192,21 @@
             height: 40px;
             font-size: 1.25rem;
           }
+          .insurance-logos-container {
+   
+          margin: 20px 0;
+    }
+    .insurance-question-text {
+    font-size: 0.9rem;
+  }
+  .payment-section-divider {
+
+    margin: 20px 0 20px 0;
+  }
+     .insurance-examination-prompt {
+          font-size: 1.125rem;}
+          .payment-description-text {
+ 
+    padding: 10px;}
         }
      

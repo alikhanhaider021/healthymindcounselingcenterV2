@@ -1,5 +1,9 @@
 "use client";
+
+
+import './Bannerslider.css';
 import { useState, useEffect } from 'react';
+
 
 export default function BannnerSliders() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -25,24 +29,7 @@ export default function BannnerSliders() {
 }
 
 
-//  {
-//   image: "/images/banner-2.jpg",
-//   title: 'GUIDING YOU TOWARD INNER PEACE',
-//   subtitle: 'Your Mental Wellness Matters',
-//   description:
-//     'At Healthy Mind Counseling Center, we help you navigate life’s challenges with compassion and care. Our therapists provide a safe space for healing, growth, and emotional balance.',
-//   buttonText: 'EXPLORE OUR SERVICES'
-// },
-// {
-//   image: "/images/banner-3.jpg",
-//   title: 'HEAL. GROW. THRIVE.',
-//   subtitle: 'Supporting You Every Step of the Way',
-//   description:
-//     'Our counseling sessions focus on self-discovery, resilience, and personal well-being. Together, we’ll build healthier thoughts and emotional strength for a more fulfilling life.',
-//   buttonText: 'LEARN MORE'
-// }
 
-    
   ];
 
   useEffect(() => {
@@ -54,8 +41,8 @@ export default function BannnerSliders() {
 
     const slideTimer = setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
+    },5000 );
+// 
     return () => {
       clearTimeout(contentTimer);
       clearTimeout(slideTimer);
@@ -111,11 +98,11 @@ export default function BannnerSliders() {
                 {slides[currentSlide].subtitle}
               </p>
               
-              <h1 className="text-white text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              <h1 className="text-white text-5xl lg:text-6xl font-bold leading-tight content-space">
                 {slides[currentSlide].title}
               </h1>
               
-              <p className="text-gray-200 text-lg mb-8 leading-relaxed">
+              <p className="text-gray-200 text-lg  leading-relaxed content-space">
                 {slides[currentSlide].description}
               </p>
               
@@ -166,24 +153,7 @@ export default function BannnerSliders() {
   </span>
 </button>
 
-              {/* <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 flex items-center gap-3 group">
-                {slides[currentSlide].buttonText}
-                <span className="w-6 h-6 bg-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                  <svg 
-                    className="w-3 h-3 text-purple-600" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={3} 
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </span>
-              </button> */}
+             
             </div>
           </div>
         </div>

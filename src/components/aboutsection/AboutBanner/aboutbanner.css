@@ -52,3 +52,16 @@
           color: #6366f1;
           font-weight: 500;
         }
+/* Hide About Banner below 768px */
+@media (max-width: 767px) {
+  .hero-section {
+    display: none;
+  }
+}
+
+/* Show About Banner on larger screens */
+@media (min-width: 768px) {
+  .hero-section {
+    display: flex;
+  }
+}

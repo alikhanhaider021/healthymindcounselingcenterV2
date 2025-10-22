@@ -1,7 +1,4 @@
-/* app/page.module.css */
-
 .main {
-  /* min-height: 100vh; */
   background-color: #f8f9fa;
 }
 
@@ -13,13 +10,11 @@
 
 /* Hero Section */
 .heroSection {
-  padding: 100px 0;
-  /* background-color: #e8f4f8; */
-   background-image: url("/images/shape-13.png");
+  padding: 10px 0;
+  background-image: url("/images/shape-13.png");
   background-size: cover;
   background-position: center;
-    background-repeat: no-repeat;
-  /* min-height: 100vh; */
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
 }
@@ -27,33 +22,33 @@
 .heroContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 20px;
   align-items: center;
 }
 
-/* Video Wrapper */
+/* ====================== VIDEO WRAPPER ====================== */
 .videoWrapper {
-    height: 80%;
   position: relative;
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   display: flex;
-  align-items: center ;
-  /* background-color: rgb(130, 127, 139); */
-  
+  align-items: center;
+  justify-content: center;
+  height: clamp(260px, 75vh, 520px); /* responsive height fix */
+  background-color: #000; /* visible while loading */
 }
 
 .video {
   width: 100%;
-  /* height:100%; */
   height: 100%;
   display: block;
- 
+  /* object-fit: cover; */
+   /* prevents distortion */
 }
 
-/* ##############################################################            ..............   textcontent */
+/* ====================== TEXT CONTENT ====================== */
 .textContent {
   max-width: 800px;
   margin: 0 auto;
@@ -69,7 +64,6 @@
 }
 
 .subtitle {
-  /* display: block; */
   font-size: 2.5rem;
   color: #007bff;
   font-weight: 600;
@@ -152,25 +146,29 @@
   transform: translateY(0);
 }
 
-/* ##############################################################            ................      Responsive Design */
+/* ====================== RESPONSIVE DESIGN ====================== */
 @media (max-width: 968px) {
   .heroContent {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 10px;
   }
 
   .title {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
 
   .heroSection {
     padding: 50px 0;
   }
+
+  .videoWrapper {
+    height: clamp(300px, 42vh, 520px);
+  }
 }
 
 @media (max-width: 640px) {
   .title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .description {
@@ -181,4 +179,17 @@
     width: 100%;
     text-align: center;
   }
+
+  .videoWrapper {
+    height: clamp(260px, 45vh, 420px);
+    border-radius: 10px;
+  }
+
+  .textContent {
+    padding: 20px 10px;
+  }
+  .container {
+
+  padding: 0 10px;
+}
 }

@@ -29,6 +29,7 @@ export default function CancellationPolicy() {
           <div className="policy-content-wrapper">
             <div className="policy-image-wrapper">
               <div className="image-glow"></div>
+              
                <Image
                             src="/images/img2.jpg"
                             alt="Cancellation & No Show Policy"
@@ -42,7 +43,7 @@ export default function CancellationPolicy() {
             
             <div className="policy-text-wrapper">
               <div className="policy-header">
-                <div className="header-accent"></div>
+                {/* <div className="header-accent"></div> */}
                 <h3 className="policy-title">Cancellation & No Show Policy</h3>
                 <p className="policy-intro">
                   We have a number of client expectations about the professional relationship we embark on with each client. We expect you to keep your appointments. Please remember that someone else may want this time.

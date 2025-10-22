@@ -10,7 +10,7 @@ export default function RatesAndInsurancePolicyBanner() {
         <div className="policy-bg-image">
           <span className="policy-overlay"></span>
         </div>
-        <div className="policy-container">
+        <div className="policy-container-banner">
           <div className="policy-content-wrapper">
             <div className="policy-text-center">
               <div>

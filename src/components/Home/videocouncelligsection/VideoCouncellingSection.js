@@ -11,9 +11,24 @@ const VideoCouncellingSection = () => {
             <div className="heroContent">
               {/* Left Side - Video */}
               <div className="videoWrapper">
-                <video
+                {/* Video element (note corrected JSX comment syntax and attributes) */}
+<video
+  className="video"
+  muted
+  autoPlay
+  controls
+  playsInline
+  preload="metadata"
+  poster="/counseling-thumbnail.jpg"
+>
+ <source src="/images/landingpageCopy .mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+                
+                {/* <video
                   className="video"
-                  muted        // add this for autoplay support
+                  muted        
                   autoPlay
                   controls
                   playsInline
@@ -22,7 +37,7 @@ const VideoCouncellingSection = () => {
                 >
                   <source src="/images/landingpageCopy .mp4" type="video/mp4" />
                   Your browser does not support the video tag.
-                </video>
+                </video> */}
               </div>
 
               {/* Right Side - Content */}

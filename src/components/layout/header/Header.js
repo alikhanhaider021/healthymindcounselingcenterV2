@@ -100,31 +100,31 @@ const HeaderNavbar = () => {
                 </button>
                 <div className="dropdown-menu" role="menu">
                   <Link href="/services" role="menuitem">All Services</Link>
-                  <Link href="/emdr" role="menuitem">EMDR Therapy</Link>
-                  <Link href="/cbt" role="menuitem">Cognitive-Behavioral Therapy</Link>
-                  <Link href="/person-centered" role="menuitem">Person-Centered Therapy</Link>
-                  <Link href="/solution-focused" role="menuitem">Solution Focused Therapy</Link>
+                  <Link href="/EMDR_therapy" role="menuitem">EMDR Therapy</Link>
+                  <Link href="/cognitive-behavioral-therapy" role="menuitem">Cognitive-Behavioral Therapy</Link>
+                  <Link href="/person-centered-therapy" role="menuitem">Person-Centered Therapy</Link>
+                  <Link href="/solution-focused-therapy" role="menuitem">Solution Focused Therapy</Link>
 
-                   <Link href="/emdr" role="menuitem">Trauma-Informed Therapy</Link>
-                  <Link href="/cbt" role="menuitem">Prenatal and Post Partum Pregnancy</Link>
-                  <Link href="/person-centered" role="menuitem">Women’s Issues</Link>
-                  <Link href="/solution-focused" role="menuitem">Spirituality Counseling</Link>
+                   <Link href="/trauma-informed-therapy" role="menuitem">Trauma-Informed Therapy</Link>
+                  <Link href="/prenatal-and-post-partum-pregnancy" role="menuitem">Prenatal and Post Partum Pregnancy</Link>
+                  <Link href="/womens-issues" role="menuitem">Women’s Issues</Link>
+                  <Link href="/spirituality-counseling" role="menuitem">Spirituality Counseling</Link>
 
-                   <Link href="/emdr" role="menuitem">Depression</Link>
-                  <Link href="/cbt" role="menuitem">Anxiety</Link>
-                  <Link href="/person-centered" role="menuitem">Post-Traumatic Stress</Link>
-                  <Link href="/solution-focused" role="menuitem">Abuse</Link>
+                   <Link href="/depression" role="menuitem">Depression</Link>
+                  <Link href="/anxiety" role="menuitem">Anxiety</Link>
+                  <Link href="/post-traumatic stress" role="menuitem">Post-Traumatic Stress</Link>
+                  <Link href="/abuse" role="menuitem">Abuse</Link>
 
-                     <Link href="/emdr" role="menuitem">Mood Disorders</Link>
-                  <Link href="/cbt" role="menuitem">Self-Harm</Link>
-                  <Link href="/person-centered" role="menuitem">Self-Esteem</Link>
-                  <Link href="/solution-focused" role="menuitem">Young Adults</Link>
+                     <Link href="/mood-disorders" role="menuitem">Mood Disorders</Link>
+                  <Link href="/self-harm" role="menuitem">Self-Harm</Link>
+                  <Link href="/self-esteem" role="menuitem">Self-Esteem</Link>
+                  <Link href="/young-adults" role="menuitem">Young Adults</Link>
 
-                   <Link href="/emdr" role="menuitem">Multicultural / POC</Link>
-                  <Link href="/cbt" role="menuitem">LGBTQIA+</Link>
-                  <Link href="/person-centered" role="menuitem">Spirituality</Link>
-                  <Link href="/solution-focused" role="menuitem">Family systems</Link>
-                  <Link href="/emdr" role="menuitem">Vegan</Link>
+                   <Link href="/multicultural-POC" role="menuitem">Multicultural / POC</Link>
+                  <Link href="/LGBTQIA" role="menuitem">LGBTQIA+</Link>
+                  <Link href="/spirituality" role="menuitem">Spirituality</Link>
+                  <Link href="/family-systems" role="menuitem">Family systems</Link>
+                  <Link href="/vegan" role="menuitem">Vegan</Link>
                
                 </div>
               </div>
@@ -243,11 +243,36 @@ const HeaderNavbar = () => {
                 </button>
                 {activeDropdown === 'services' && (
                   <div id="services-dropdown" className="mobile-dropdown-content">
-                    <Link href="/services" onClick={closeMenu}>All Services</Link>
-                    <Link href="/emdr" onClick={closeMenu}>EMDR Therapy</Link>
-                    <Link href="/cbt" onClick={closeMenu}>Cognitive-Behavioral Therapy</Link>
-                    <Link href="/person-centered" onClick={closeMenu}>Person-Centered Therapy</Link>
-                    <Link href="/solution-focused" onClick={closeMenu}>Solution Focused Therapy</Link>
+<Link href="/services" onClick={closeMenu} role="menuitem">All Services</Link>
+                  <Link href="/EMDR_therapy" onClick={closeMenu} role="menuitem">EMDR Therapy</Link>
+                  <Link href="/cognitive-behavioral-therapy" onClick={closeMenu} role="menuitem">Cognitive-Behavioral Therapy</Link>
+                  <Link href="/person-centered-therapy" onClick={closeMenu} role="menuitem">Person-Centered Therapy</Link>
+                  <Link href="/solution-focused-therapy" onClick={closeMenu} role="menuitem">Solution Focused Therapy</Link>
+
+                   <Link href="/trauma-informed-therapy" onClick={closeMenu} role="menuitem">Trauma-Informed Therapy</Link>
+                  <Link href="/prenatal-and-post-partum-pregnancy" onClick={closeMenu} role="menuitem">Prenatal and Post Partum Pregnancy</Link>
+                  <Link href="/womens-issues" onClick={closeMenu} role="menuitem">Women’s Issues</Link>
+                  <Link href="/spirituality-counseling" onClick={closeMenu} role="menuitem">Spirituality Counseling</Link>
+
+                   <Link href="/depression" onClick={closeMenu} role="menuitem">Depression</Link>
+                  <Link href="/anxiety" onClick={closeMenu} role="menuitem">Anxiety</Link>
+                  <Link href="/post-traumatic stress" onClick={closeMenu} role="menuitem">Post-Traumatic Stress</Link>
+                  <Link href="/abuse" onClick={closeMenu} role="menuitem">Abuse</Link>
+
+                     <Link href="/mood-disorders" onClick={closeMenu} role="menuitem">Mood Disorders</Link>
+                  <Link href="/self-harm" onClick={closeMenu} role="menuitem">Self-Harm</Link>
+                  <Link href="/self-esteem" onClick={closeMenu} role="menuitem">Self-Esteem</Link>
+                  <Link href="/young-adults" onClick={closeMenu} role="menuitem">Young Adults</Link>
+
+                   <Link href="/multicultural-POC" onClick={closeMenu} role="menuitem">Multicultural / POC</Link>
+                  <Link href="/LGBTQIA" onClick={closeMenu} role="menuitem">LGBTQIA+</Link>
+                  <Link href="/spirituality" onClick={closeMenu} role="menuitem">Spirituality</Link>
+                  <Link href="/family-systems" onClick={closeMenu} role="menuitem">Family systems</Link>
+                  <Link href="/vegan" onClick={closeMenu} role="menuitem">Vegan</Link>
+
+
+
+                   
                   </div>
                 )}
               </div>

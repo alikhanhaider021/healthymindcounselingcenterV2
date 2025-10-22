@@ -1,38 +1,45 @@
-
-/* Main Section */
+/* ===== Intro section background (unchanged) ===== */
 .introsection{
   background-image: url('/images/shape-8.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
+/* ===== Main section spacing & responsive container ===== */
 .about-section {
   padding: 64px 16px;
-  /* background-color: #f9fafb; */
- 
+  box-sizing: border-box;
 }
 
+/* make container fluid but limit max width and center it */
 .about-container {
-  /* max-width: 1190px; */
-  width: 73%;
+  width: 100%;
+  max-width: 1200px;    /* keeps layout stable on large screens */
   margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
+/* grid: use flex with wrapping so items can stack gracefully */
 .about-grid {
   display: flex;
-  
   gap: 50px;
   align-items: center;
-}
-/* ############################################################################################left content */
-.about-content {
-  /* max-width: 800px; */
-  width: 80%;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allow wrapping on narrower screens */
 }
 
-.about-header {
-  margin-bottom: 20px;
+/* Left content */
+.about-content {
+  flex: 1 1 540px; /* grow, shrink, base width */
+  min-width: 280px; /* prevents cramping */
+  max-width: 720px;
+  box-sizing: border-box;
 }
+
+/* Header and text styles (mostly unchanged) */
+.about-header { margin-bottom: 20px; }
 
 .about-subtitle {
   color: #0077b6;
@@ -57,9 +64,7 @@
   margin-top: 16px;
 }
 
-.about-description strong {
-  color: #0077b6;
-}
+.about-description strong { color: #0077b6; }
 
 .read-more-btn {
   display: inline-block;
@@ -79,33 +84,20 @@
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-title {
-    font-size: 26px;
-  }
-
-  .about-description {
-    font-size: 15px;
-  }
-
-  .read-more-btn {
-    padding: 10px 24px;
-    font-size: 14px;
-  }
-}
-
-/* ############################################################################################Right Image Section */
+/* Right image column */
 .about-image-wrapper {
+  flex: 0 1 420px; /* do not grow, can shrink, base width */
+  min-width: 220px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .image-container {
   position: relative;
   border-radius: 16px;
-    overflow: visible;
-
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: visible; /* allow overlay out of bounds */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .doctor-image {
@@ -116,78 +108,128 @@
   border-radius: 12px;
 }
 
-/* Experience Box */
+/* ===== Experience box: make positioning responsive (no hard negative left) ===== */
 .experience-box {
-    text-align: center;
+  text-align: center;
   position: absolute;
-  bottom: -50px;
-  left: -90px;
-  background-color: #2563eb;
+  bottom: -40px;
+  left: -16%;              
+   /* anchor relative to image on small screens */
+  transform: translateX(0);
+  /* background-color: #2563eb; */
+  background-color: #0077b6;
   color: white;
-  padding: 30px 15px;
+  padding: 32px 14px;
   border-radius: 100px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   z-index: 10;
+  min-width: 120px;
 }
+
+/* number + text sizes */
 .experience-number {
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .experience-text {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
-/* Decorative Icon */
+/* Decorative Icon (adjusted sizing) */
 .decorative-icon {
   position: absolute;
-  top: -24px;
-  right: -24px;
+  top: -20px;
+  right: -20px;
   background-color: white;
-  padding: 16px;
+  padding: 12px;
   border-radius: 50%;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  width: 80px;
-  height: 80px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.decorative-icon svg {
-  width: 48px;
-  height: 48px;
-  color: #2563eb;
+.decorative-icon svg { width: 40px; height: 40px; color: #2563eb; }
+
+/* ===== Breakpoint: <= 1280px — reduce gaps and scale headings ===== */
+@media (max-width: 1280px) {
+  .about-grid { gap: 36px; }
+  .about-title { font-size: 40px; }
+  /* .experience-box { bottom: -42px; left: 8px; padding: 32px 12px; } */
+  .experience-number { font-size: 52px; }
 }
-
-/* Tablet Responsive */
-@media (min-width: 768px) {
-  .about-section {
-    padding: 104px 32px;
-  }
-
-  .about-title {
-    font-size: 40px;
-  }
-
-  .about-description {
-    font-size: 18px;
-  }
-
-  .about-features {
-    /* grid-template-columns: repeat(2, 1fr); */
-  }
-}
-
-/* Desktop Responsive */
-@media (min-width: 1024px) {
+@media (max-width: 1060px){
+.about-grid {
  
-
-  .about-title {
-    font-size: 48px;
+    justify-content: center;
+}}
+/* ===== Breakpoint: <= 1024px — stack columns if needed ===== */
+@media (max-width: 1024px) {
+  .about-grid {
+    gap: 5px;
   }
+
+  /* If there isn't enough space, let image go below content */
+  /* Use column reverse on very narrow but keep normal on medium */
+  .about-content { flex: 1 1 100%; max-width: 100%; }
+  .about-image-wrapper { flex: 1 1 100%; max-width: 480px; margin: 0 auto; }
+
+  .about-title { font-size: 36px; }
+  .about-description { font-size: 16px; }
+
+  /* move the experience box more centered under image on medium screens */
+  /* .experience-box {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -48px;
+  } */
+
+  .decorative-icon { top: -16px; right: -16px; width: 60px; height: 60px; }
+}
+
+/* ===== Breakpoint: <= 768px — mobile stacking and spacing ===== */
+@media (max-width: 768px) {
+  .about-section { padding: 48px 16px; }
+  .about-title { font-size: 28px; }
+  .about-description { font-size: 15px; line-height: 1.6; }
+  .read-more-btn { padding: 10px 20px; font-size: 14px; }
+
+  /* stack layout: left (text) first, image below */
+  .about-content, .about-image-wrapper {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  /* Experience box sits centered under image */
+  .experience-box {
+  
+        left: 18%;
+        transform: translateX(-50%);
+        bottom: -60px;
+        padding: 32px 12px;
+    min-width: 110px;
+  }
+
+  .experience-number { font-size: 40px; }
+  .decorative-icon { display: none; } /* hide small decorative icon to save space */
+}
+
+/* ===== Small phones ===== */
+@media (max-width: 480px) {
+  .about-section { padding: 36px 12px; }
+  .about-title { font-size: 22px; }
+  .about-description { font-size: 14px; }
+  .experience-number { font-size: 32px; }
+  .experience-text { font-size: 12px; }
+      .experience-box {
+       
+        padding: 28px 5px;}
 }
