@@ -34,7 +34,7 @@ const ContactBanner = () => {
 
       {/* Contact Cards Section */}
       <section className="contact-cards-section">
-        <div className="container">
+        <div className="container-contact">
           <div className="cards-grid">
             {/* Office Location Card */}
             <div className="contact-card">

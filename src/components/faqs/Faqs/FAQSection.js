@@ -1,3 +1,4 @@
+
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -17,7 +18,7 @@ export default function FAQSection() {
       question: "What's the difference between talking with a therapist or my best friend or family?",
       answer: [
         "While a friend or family member might be sympathetic to how you are feeling, that doesn't mean they are trained to deal with it. Just as a friend might be sympathetic to how it feels to break an arm or leg, that doesn't mean they know how to properly wrap the break so that it can heal properly. If a broken limb is wrapped incorrectly, it can heal poorly and result in a lifetime of pain. In these cases, sometimes you may even have to rebreak the limb so that you can have it heal properly! Like other health care professionals, a licensed mental health practitioner is trained on how to best tend to emotional and mental wounds so that they heal properly, and don't cause you more pain and discomfort in the future.",
-        "A psychological wellness professional can aid you by approaching your circumstances in a new way-- educate you with brand-new abilities, get different viewpoints, listen to you without judgment or expectations, and also help you pay attention on your own. Moreover, therapy is entirely confidential. You won't have to stress over others \"knowing my business.\"",
+        "A psychological wellness professional can aid you by approaching your circumstances in a new way-- educate you with brand-new abilities, get different viewpoints, listen to you without judgment or expectations, and also help you pay attention on your own. Moreover, therapy is entirely confidential. You won't have to stress about others \"knowing my business.\"",
         "Finally, if your scenario provokes a large number of unfavorable feelings, if you've been relying on a good friend or member of the family, there is the threat that as soon as you are feeling far better you could begin staying clear of that person so you aren't reminded of this difficult time in your life."
       ]
     },
@@ -62,9 +63,9 @@ export default function FAQSection() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-background"></div>
-        <div className="hero-particles"></div>
+      <section className="hero-section" aria-hidden={typeof window !== 'undefined' && window.innerWidth < 768 ? "true" : "false"}>
+        <div className="hero-background" />
+        <div className="hero-particles" />
         <Image
           className="hero-logo"
           alt="Healthy mind counseling center"
@@ -87,11 +88,12 @@ export default function FAQSection() {
             viewBox="0 0 2560 100"
             x="0"
             y="0"
+            aria-hidden="true"
           >
             <polygon
               className="fill-current text-gray-50"
               points="2560 0 2560 100 0 100"
-            ></polygon>
+            />
           </svg>
         </div>
 
@@ -103,7 +105,7 @@ export default function FAQSection() {
                 <h2 className="faq-title">
                   Flagler County Mental Health FAQ
                 </h2>
-                <div className="title-underline"></div>
+                <div className="title-underline" />
               </div>
 
               {/* FAQ Items */}
@@ -116,6 +118,8 @@ export default function FAQSection() {
                     <button
                       onClick={() => toggleFAQ(index)}
                       className="faq-question"
+                      aria-expanded={openIndex === index}
+                      aria-controls={`faq-answer-${index}`}
                     >
                       <span className="faq-question-text">
                         {faq.question}
@@ -125,6 +129,7 @@ export default function FAQSection() {
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
+                        aria-hidden="true"
                       >
                         <path
                           strokeLinecap="round"
@@ -136,9 +141,9 @@ export default function FAQSection() {
                     </button>
 
                     <div
-                      className={`faq-answer-wrapper ${
-                        openIndex === index ? 'faq-answer-open' : ''
-                      }`}
+                      id={`faq-answer-${index}`}
+                      className={`faq-answer-wrapper ${openIndex === index ? 'faq-answer-open' : ''}`}
+                      aria-hidden={openIndex !== index}
                     >
                       <div className="faq-answer-content">
                         {faq.answer.map((paragraph, pIndex) => (
@@ -163,8 +168,6 @@ export default function FAQSection() {
           </div>
         </div>
       </section>
-
-     
     </>
   );
 }

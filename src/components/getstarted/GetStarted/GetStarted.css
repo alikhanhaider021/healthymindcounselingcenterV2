@@ -2,7 +2,7 @@
 .appointment-section {
   position: relative;
   /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-  padding: 5rem 1rem 10rem;
+  padding: 3rem 1rem 1rem;
   overflow: hidden;
 }
 
@@ -116,7 +116,7 @@
   }
 
   .appointment-card {
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
     border-radius: 20px;
   }
 
@@ -141,10 +141,20 @@
     height: 1400px;
   }
 }
+@media (max-width: 1032px){
+.appointment-section {
 
-@media (max-width: 640px) {
+    padding: 5rem 1rem 1rem;
+}
+}
+
+
+@media (max-width: 639px) {
+      .appointment-section {
+        padding: 1rem 0rem 1rem;
+    }
   .appointment-card {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.2rem;
   }
 
   .appointment-title {

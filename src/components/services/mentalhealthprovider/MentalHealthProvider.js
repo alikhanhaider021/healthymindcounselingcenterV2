@@ -64,14 +64,23 @@ export default function MentalHealthProvider() {
 
                   <div className="services-image-block">
                     <div className="services-image-card">
-                      <Image
+                                        <Image
+                   alt="Services image"
+                   className="services-image"
+                   src="/images/img2.jpg"
+                   width={1000}
+                   height={600} /* keep intrinsic ratio, Next/Image needs numbers */
+                   style={{ width: "100%", objectFit: "cover" }} /* remove fixed height */
+                   sizes="(max-width:1024px) 100vw, 50vw"
+                 />     
+                      {/* <Image
                         alt="Services image"
                         className="services-image"
                         src="/images/img2.jpg"
                         width={1000}
                         height={458}
                         style={{ width: "100%", height: "458px", objectFit: "cover" }}
-                      />
+                      /> */}
                     </div>
                   </div>
                 </div>
@@ -86,14 +95,23 @@ export default function MentalHealthProvider() {
                 <div className="services-provider-wrapper">
                   <div className="services-provider-image-block">
                     <div className="services-provider-image-card">
-                      <Image
+                       <Image
+  alt="Choosing a Mental Health Provider"
+  className="services-provider-image"
+  src="/images/img4.jpg"
+  width={1000}
+  height={700} /* intrinsic height ok */
+  style={{ width: "100%", objectFit: "cover" }} /* no fixed height */
+  sizes="(max-width:1024px) 100vw, 50vw"
+/>
+                      {/* <Image
                         alt="Choosing a Mental Health Provider"
                         className="services-provider-image"
                         src="/images/img4.jpg"
                         width={1000}
                         height={558}
                         style={{ width: "100%", height: "700px", objectFit: "cover" }}
-                      />
+                      /> */}
                     </div>
                   </div>
                   <div className="services-provider-text-block">

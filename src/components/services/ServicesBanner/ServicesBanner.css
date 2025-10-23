@@ -2,7 +2,7 @@
 
 .services-banner {
   position: relative;
-  min-height: 550px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,9 @@
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
-  padding: 80px 20px;
+  padding: 0px 20px;
+  padding-top: 90px;
+  padding-bottom: 40px;
 
 }
 
@@ -80,7 +82,9 @@
 @media (max-width: 768px) {
   .services-banner {
     min-height: 380px;
-    padding: 60px 20px;
+    padding: 0px 20px;
+    padding-top: 110px;
+    padding-bottom: 10px;
   }
 
   .banner-content {
@@ -98,15 +102,19 @@
     line-height: 1.7;
   }
 }
-
-@media (max-width: 480px) {
+@media (max-width: 639px){
   .services-banner {
-    min-height: 320px;
-    padding: 40px 15px;
+    min-height: 310px;
+    padding: 0px 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
+}
+@media (max-width: 480px) {
+ 
 
   .banner-content {
-    padding: 30px 25px;
+    padding: 10px 10px;
     border-radius: 14px;
   }
 
