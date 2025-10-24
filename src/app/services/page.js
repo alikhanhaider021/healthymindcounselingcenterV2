@@ -14,19 +14,22 @@ import SolutionFocusedTherapy from '@/components/services/solutionfocusedtherapy
 import CognitiveBehavioralTherapy from '@/components/services/cognitivebehavioraltherapy/CognitiveBehavioralTherapy'
 import TraumaInformedTherapy from '@/components/services/traumaInformedtherapy/TraumaInformedTherapy'
 import MillennialsSection from '@/components/services/millennials/Millennials'
-import GenzSection from '@/components/services/genz/Genz'
+
 import LGBTQIASection from '@/components/services/LGBTQIa/LGBTQIA'
 import VegansSection from '@/components/services/vegans/Vegans'
 import SpiritualCounselingSection from '@/components/services/spiritualcounseling/Spiritualcounseling'
 import POCSection from '@/components/services/poc/POC'
 import HoursOfOperation from '@/components/services/cardtable/CardTable'
 import EvaluationsReferrals from '@/components/services/referrals/Referrals'
+import MentalhealthproviderSlider from '@/components/MentalhealthproviderSlider/MentalhealthproviderSlider'
+import GenzSection from '@/components/services/genz/Genz'
 
 const services = () => {
   return (
 <>
 <ServicesBanner/>
-<MentalHealthProvider/>
+
+<MentalhealthproviderSlider/>
 <TypesOfTherapists/>
 <FindTherapistGuide/>
 <TherapistRateInfo/>
@@ -39,6 +42,7 @@ const services = () => {
 <CognitiveBehavioralTherapy/>
 <TraumaInformedTherapy/>
 <MillennialsSection/>
+
 <GenzSection/>
 <LGBTQIASection/>
 <VegansSection/>

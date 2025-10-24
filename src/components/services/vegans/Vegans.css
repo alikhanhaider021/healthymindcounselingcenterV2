@@ -226,7 +226,7 @@
 
         @media (max-width: 768px) {
           .vegans-section {
-            padding: 3rem 0;
+            padding: 1rem 0;
           }
 
           .vegans-content-wrapper {
@@ -251,6 +251,15 @@
           .vegans-bg-decoration-1,
           .vegans-bg-decoration-2 {
             display: none;
+          }
+          .vegans-container {
+          padding: 0 0.4rem;
+          }
+          .vegans-text-wrapper {
+          padding: 0 0.4rem;
+          }
+          .vegans-heading-container {
+          margin-bottom: 1rem;
           }
         }
 

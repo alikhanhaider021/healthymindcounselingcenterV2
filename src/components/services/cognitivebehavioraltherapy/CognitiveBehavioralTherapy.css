@@ -245,11 +245,11 @@
 
         @media (max-width: 768px) {
           .CognitiveBehavioralTherapy {
-            padding: 60px 0;
+            padding: 40px 0;
           }
 
           .CognitiveBehavioralTherapy__wrapper {
-            gap: 40px;
+            gap: 10px;
           }
 
           .CognitiveBehavioralTherapy__imageWrapper {
@@ -277,6 +277,13 @@
             width: 200px;
             height: 200px;
           }
+          .CognitiveBehavioralTherapy__container {
+   
+    padding: 0 5px;
+          }
+          .CognitiveBehavioralTherapy__content {
+    padding: 10px;
+}
         }
 
         @media (max-width: 480px) {

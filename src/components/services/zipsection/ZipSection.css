@@ -40,7 +40,8 @@
 .zip-container{
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--container-pad);
+padding-left: 10px;
+padding-right: 10px;
   z-index: 10;
   position: relative;
 }
@@ -208,6 +209,17 @@
   .zip-right{
     margin-top: 8px;
   }
+}
+@media (max-width:768px){
+  .zip-section {
+ 
+    padding: 0px 0 0px;
+    padding-top: 100px;
+  }
+      .zip-card {
+    
+        padding: 10px;
+      }
 }
 
 @media (max-width: 420px){

@@ -441,7 +441,7 @@
 
         @media (max-width: 768px) {
           .millennials-section {
-            padding: 60px 0;
+            padding: 20px 0;
           }
 
           .millennials-title-main {
@@ -459,6 +459,27 @@
           .millennials-image-container-left,
           .millennials-image-container-right {
             height: 350px;
+          }
+          .millennials-container {
+    padding: 0 5px;
+          }
+          .millennials-text-center {
+ 
+    padding: 0 5px;
+          }
+          .millennials-paragraph {
+     padding: 15px;
+          }
+          .millennials-description {
+    margin-bottom: 10px;
+          }
+          .millennials-stats {
+         gap: 20px;
+         margin-top: 20px;
+          }
+          .millennials-stat-card {
+
+    padding: 15px 10px;
           }
         }
 

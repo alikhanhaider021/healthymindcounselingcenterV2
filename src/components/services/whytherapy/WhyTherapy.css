@@ -10,7 +10,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 8rem 0 10rem;
+  padding: 2rem 0 2rem;
   overflow: hidden;
 }
 
@@ -110,7 +110,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   align-items: start;
 }
 
@@ -458,14 +458,17 @@
 }
 
 @media (max-width: 768px) {
+  .WhyTherapy-container {
+    padding: 0 0.6rem;
+  }
   .WhyTherapy-section {
-    padding: 6rem 0 8rem;
+    padding: 1.5rem 0 1.5rem;
     background-attachment: scroll;
   }
 
   .WhyTherapy-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .WhyTherapy-image-wrapper:nth-child(1),
@@ -485,6 +488,8 @@
   }
 
   .WhyTherapy-cta {
+        gap: 0.9rem;
+    margin-top: 1rem;
     grid-template-columns: 1fr;
   }
 
@@ -492,6 +497,11 @@
   .WhyTherapy-btn-secondary {
     width: 100%;
   }
+  .WhyTherapy-header {
+   margin-bottom: 3rem;
+  }
+ 
+  
 }
 
 @media (max-width: 480px) {
@@ -504,7 +514,7 @@
   }
 
   .WhyTherapy-feature-card {
-    padding: 1.5rem;
+    padding: 0.9rem;
   }
 
   .WhyTherapy-feature-title {
@@ -513,5 +523,8 @@
 
   .WhyTherapy-feature-description {
     font-size: 0.95rem;
+  }
+  .WhyTherapy-btn-primary, .WhyTherapy-btn-secondary {
+    padding: 1rem 1.5rem;
   }
 }

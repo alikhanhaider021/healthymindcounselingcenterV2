@@ -37,7 +37,7 @@ const WhyTherapy = () => {
     { type: "image", id: "img-1", src: "/images/img8.jpg", alt: "Professional Therapy Support" },
     { type: "feature", featureIndex: 0 },
     { type: "feature", featureIndex: 1 },
-    { type: "image", id: "img-2", src: "/images/img8.jpg", alt: "Mental Health Counseling" },
+    { type: "image", id: "img-2", src: "/images/art_therapy_for_mental_health.jpg", alt: "Mental Health Counseling" },
     { type: "feature", featureIndex: 2 },
     { type: "feature", featureIndex: 3 }
   ];

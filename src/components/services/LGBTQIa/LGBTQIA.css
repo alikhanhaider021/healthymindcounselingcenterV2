@@ -282,4 +282,16 @@
             padding: 4rem;
           }
         }
-      
+      @media (max-width : 768px){
+        .LGBTQIA-section {
+          padding: 2rem 0.4rem;
+        }
+        .LGBTQIA-content {
+   
+    padding: 0.4rem;
+        }
+        .LGBTQIA-highlight-box {
+  
+    padding: 0.2rem;
+        }
+      }

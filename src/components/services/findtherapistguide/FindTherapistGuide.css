@@ -154,11 +154,25 @@
             right: 10px;
             bottom: 10px;
           }
+
+.service-section-find-therapist-guide {
+
+    padding: 20px 0;
+}
+.service-container-find-therapist-guide {
+   
+    padding: 0 10px;
+}
+.service-wrapper-find-therapist-guide {
+   
+    gap: 40px;
+}
+
         }
 
         @media (max-width: 480px) {
           .service-content-inner {
-            padding: 20px;
+            padding: 10px;
           }
 
           .service-paragraph {

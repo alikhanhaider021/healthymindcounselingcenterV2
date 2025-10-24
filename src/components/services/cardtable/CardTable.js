@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Clock, CheckCircle, XCircle } from 'lucide-react';
 import './CardTable.css';
+
 const HoursOfOperation = () => {
   const scheduleData = [
     { day: 'Monday', status: 'open', opening: '10:00 AM', closing: '7:00 PM' },
@@ -14,8 +16,6 @@ const HoursOfOperation = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 px-4">
-    
-
       <div className="CardTable-container">
         <div className="CardTable-wrapper">
           <div className="CardTable-inner">
@@ -28,7 +28,7 @@ const HoursOfOperation = () => {
               </h2>
             </div>
 
-            <table className="CardTable-table">
+            <table className="CardTable-table" aria-label="Hours of Operation">
               <thead className="CardTable-thead">
                 <tr>
                   <th className="CardTable-th">Day</th>
@@ -40,13 +40,14 @@ const HoursOfOperation = () => {
               <tbody className="CardTable-tbody">
                 {scheduleData.map((item, index) => (
                   <tr key={item.day} className="CardTable-row">
-                    <td className="CardTable-td">
+                    <td className="CardTable-td" data-label="Day">
                       <div className="CardTable-day">
                         <span className="CardTable-day-number">{index + 1}</span>
                         {item.day}
                       </div>
                     </td>
-                    <td className="CardTable-td">
+
+                    <td className="CardTable-td" data-label="Status">
                       <span className={`CardTable-status ${item.status === 'open' ? 'CardTable-status-open' : 'CardTable-status-closed'}`}>
                         <span className="CardTable-icon-wrapper">
                           {item.status === 'open' ? (
@@ -58,12 +59,14 @@ const HoursOfOperation = () => {
                         {item.status === 'open' ? 'Open' : 'Closed'}
                       </span>
                     </td>
-                    <td className="CardTable-td">
+
+                    <td className="CardTable-td" data-label="Opening">
                       <span className={`CardTable-time ${item.status === 'closed' ? 'CardTable-time-closed' : ''}`}>
                         {item.opening}
                       </span>
                     </td>
-                    <td className="CardTable-td">
+
+                    <td className="CardTable-td" data-label="Closing">
                       <span className={`CardTable-time ${item.status === 'closed' ? 'CardTable-time-closed' : ''}`}>
                         {item.closing}
                       </span>

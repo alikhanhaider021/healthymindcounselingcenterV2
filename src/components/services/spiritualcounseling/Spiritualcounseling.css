@@ -350,7 +350,7 @@
 
         @media (max-width: 768px) {
           .spiritualcounseling-section {
-            padding: 3rem 0;
+            padding: 1rem 0;
           }
 
           .spiritualcounseling-content-wrapper {
@@ -364,7 +364,7 @@
 
           .spiritualcounseling-paragraph {
             font-size: 1rem;
-            padding: 1rem;
+            padding: 0.6rem;
           }
 
           .spiritualcounseling-cta-button {
@@ -380,6 +380,12 @@
           .spiritualcounseling-particle-3,
           .spiritualcounseling-particle-4 {
             display: none;
+          }
+          .spiritualcounseling-container {
+    padding: 0 0.4rem;
+          }
+          .spiritualcounseling-text-wrapper {
+    padding: 0 0.2rem;
           }
         }
 

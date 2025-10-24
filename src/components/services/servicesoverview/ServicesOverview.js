@@ -26,7 +26,7 @@ export default function WhatWeDo({ whatwedo }) {
   }, []);
 
   return (
-    <section className="wwd-section relative bg-white py-20" ref={whatwedo}>
+    <section className="wwd-section relative bg-white sm:py-20" ref={whatwedo}>
       <div className="wwd-container">
         <div className="wwd-inner items-center text-justify">
           <div ref={cardRef} className="wwd-card w-full md:w-10-12 ml-auto mr-auto px-4">

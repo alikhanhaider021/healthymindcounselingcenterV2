@@ -199,7 +199,7 @@
 
 @media (max-width: 768px) {
     .service-section {
-        padding: 60px 0 80px;
+        padding: 20px 0 20px;
     }
 
     .service-title {
@@ -207,7 +207,8 @@
     }
 
     .service-card {
-        padding: 25px 20px;
+        padding: 15px 15px;
+            margin-bottom: 15px;
     }
 
     .service-card-text {
@@ -218,4 +219,39 @@
         font-size: 16px;
         padding: 10px 24px;
     }
+    .service-divider {
+    margin: 40px auto;
+    
+    }
+    .service-header {
+    
+    margin-bottom: 0px;
+    }
+    
+.service-container {
+    padding: 0 5px;
+}
+
+.service-source-container {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    
+}
+
+
+service-slide-up animation {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.service-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+@media (max-width: 768px) {
+    .service-card {
+        padding: 15px 15px;
+    }
+}
+
+
 }

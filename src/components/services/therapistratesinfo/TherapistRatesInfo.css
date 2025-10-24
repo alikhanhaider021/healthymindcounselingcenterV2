@@ -1,7 +1,7 @@
 /* TherapistRate Core CSS - Ultra Attractive Design */
 
 .TherapistRate-section {
-  padding-bottom: 10rem;
+ 
   /* position: relative; */
   /* background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); */
   /* background-size: 200% 200%; */
@@ -44,12 +44,12 @@
 .TherapistRate-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 0.1rem;
 }
 
 .TherapistRate-topContent {
-  padding-bottom: 8rem;
-  padding-top: 12rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .TherapistRate-flexWrap {
@@ -81,7 +81,7 @@
   padding-right: 0;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  padding: 3rem;
+  padding: 1.5rem;
   border-radius: 2rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -203,8 +203,8 @@
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
   animation: TherapistRate-fadeInUp 1.2s ease-out;
 }
 
@@ -342,7 +342,7 @@
   }
 
   .TherapistRate-textInner {
-    padding-right: 3rem;
+    padding-right: 1.5rem;
   }
 
   .TherapistRate-imageColumn {
@@ -372,21 +372,22 @@
   }
 
   .TherapistRate-topContent {
-    padding-top: 8rem;
-    padding-bottom: 4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 0.5rem;
   }
+ 
 
   .TherapistRate-textColumn,
   .TherapistRate-bottomContent {
-    padding: 0 1.5rem;
+    padding: 0 0.2rem;
   }
 
   .TherapistRate-textInner {
-    padding: 2rem 1.5rem;
+    padding: 0.9rem 0.5rem;
   }
 
   .TherapistRate-bottomContent {
-    padding: 3rem 1.5rem;
+    padding: 1rem 0.5rem;
   }
 
   .TherapistRate-image {
@@ -396,6 +397,24 @@
   .TherapistRate-image:hover {
     transform: scale(1.02);
   }
+  .TherapistRate-imageColumn {
+ 
+    padding-top: 0rem;
+  }
+ .TherapistRate-flexWrap {
+    gap: 1.5rem;
+ }
+
+ .TherapistRate-descriptionText {
+    font-size: 1.125rem;
+    line-height: 2;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: #475569;
+    padding: 1rem;
+  
+ }
 }
 
 /* Scroll Animation Trigger Classes (Optional - add with JS) */

@@ -151,7 +151,7 @@
 
         @media (max-width: 768px) {
           .solutionFocusedTherapySection {
-            padding: 3rem 0;
+            padding: 1rem 0;
           }
 
           .solutionFocusedTherapyWrapper {
@@ -159,7 +159,7 @@
           }
 
           .solutionFocusedTherapyContent {
-            padding: 2rem;
+            padding: 0.5rem;
           }
 
           .solutionFocusedTherapyTitle {
@@ -177,6 +177,10 @@
           .solutionFocusedTherapyImageWrapper:hover {
             transform: scale(1.02);
           }
+           .solutionFocusedTherapyContainer {
+         
+          padding: 0 0.3rem;
+           }
         }
 
         @keyframes solutionFocusedTherapyFadeIn {

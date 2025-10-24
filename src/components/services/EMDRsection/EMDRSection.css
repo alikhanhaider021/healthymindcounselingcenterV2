@@ -149,7 +149,11 @@
 
 @media (min-width: 768px) {
   .emdr-content-wrapper {
-    padding-right: 3rem;
+    padding-right: 0.2rem;
+  }
+  .emdr-content-column {
+ 
+   padding: 0 1rem;
   }
 }
 
@@ -293,4 +297,29 @@
   50% {
     opacity: 0.3;
   }
+}
+
+@media (max-width:768px){
+  .emdr-section {
+    position: relative;
+    padding: 1rem 0;
+  }
+  .emdr-container {
+  padding: 0 0.2rem;
+
+  }
+  .emdr-image-column {
+    padding: 0 0.5rem;
+  }
+    .emdr-content-column {
+    width: 100%;
+    padding: 0 0.3rem;
+    }
+  
+.emdr-flex-wrapper {
+    gap: 1rem;
+}
+ .emdr-description {
+    padding: 0.9rem;
+ }
 }

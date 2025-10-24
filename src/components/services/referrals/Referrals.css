@@ -164,11 +164,14 @@
 
         @media (max-width: 768px) {
           .referrals-wrapper {
-            padding: 48px 0;
+            padding: 28px 0;
+          }
+          .referrals-container {
+          padding: 0 10px;
           }
 
           .referrals-main-card {
-            padding: 32px 24px;
+            padding: 14px 10px;
           }
 
           .referrals-title {
@@ -177,7 +180,7 @@
 
           .referrals-description {
             font-size: 1rem;
-            padding: 20px;
+            padding: 10px;
           }
 
           .referrals-title-wrapper {

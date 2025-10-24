@@ -213,4 +213,15 @@
         .Genz-section .Genz-card:hover p{ 
           color: rgba(255,255,255,0.96); 
         }
-     
+       @media (max-width:768px){
+        .Genz-section {
+         padding: 1rem 0.6rem;
+        }
+        .Genz-card {
+    padding: 0.6rem;
+        }
+
+
+
+       }
+       

@@ -1,0 +1,447 @@
+/* --- MentalHealthProvider styles (paste into app/globals.css) --- */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+ 
+}
+
+.slides-wrapper {
+  /* display: flex;
+   */
+  transition: transform 0.6s ease-in-out;
+  /* transform ko inline style se control karenge */
+}
+
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.slider-button {
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider-button:hover {
+  background: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.dot.active {
+  background: white;
+  transform: scale(1.3);
+}
+
+.services-section {
+  padding-bottom: 5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.services-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.services-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+
+.services-text-block {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.services-text-block:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.services-paragraph {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+.services-cta-link {
+  display: inline-block;
+  font-weight: 700;
+  color: #667eea;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  cursor: pointer;
+  border: none;
+}
+
+.services-cta-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+}
+
+.services-image-block {
+  flex: 1;
+  min-width: 300px;
+  /* padding: 1rem; */
+}
+
+.services-image-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.services-image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.services-image {
+  width: 100%;
+  height: 458px;
+  object-fit: cover;
+  vertical-align: middle;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.services-image-card:hover .services-image {
+  transform: scale(1.1);
+}
+
+.services-provider-section {
+  position: relative;
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.services-provider-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.services-provider-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.services-provider-image-block {
+  flex: 1;
+  min-width: 300px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding: 1rem;
+}
+
+.services-provider-image {
+  max-width: 100%;
+  width: 100%;
+  height: 458px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.services-provider-image:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.services-provider-text-block {
+  flex: 1;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.services-provider-content {
+  padding-right: 3rem;
+}
+
+.services-provider-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.services-provider-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
+
+.services-provider-paragraph {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #ffffff;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border-left: 4px solid white;
+  transition: all 0.3s ease;
+}
+
+.services-provider-paragraph:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(10px);
+}
+/* Responsive fixes for <= 1024px */
+@media (max-width: 1024px) {
+  /* make both wrappers stack vertically */
+  .services-content-wrapper,
+  .services-provider-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  /* Ensure text/content appears above images regardless of DOM order */
+  .services-text-block,
+  .services-provider-text-block,
+  .services-provider-content {
+    order: 1;
+  }
+
+  .services-image-block,
+  .services-provider-image-block,
+  .services-image-card,
+  .services-provider-image-card {
+    order: 2;
+  }
+
+  /* Make image cards adapt in height and not overflow */
+  .services-image,
+  .services-provider-image {
+    height: auto;           /* remove fixed height */
+    max-height: 360px;     /* limit height so it doesn't become huge */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  /* Reduce padding on text cards to fit smaller screens */
+  .services-text-block,
+  .services-provider-text-block {
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+
+  /* Slightly smaller CTAs and headings */
+  .services-provider-heading {
+    font-size: 1.5rem;
+  }
+
+  .services-paragraph,
+  .services-provider-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Tighter image card shadows on small screens */
+  .services-image-card,
+  .services-provider-image-card {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  }
+
+  /* Put slider controls in-smaller size */
+  .slider-button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+.services-provider-image-block {
+  
+     padding: 0.2rem;
+}
+.services-provider-paragraph {
+    padding: 0.9rem;
+}
+
+  .services-section {
+    padding-bottom: 1rem;
+  }
+
+  .services-content-wrapper {
+    margin-top: 2rem;
+  }
+
+  .services-text-block,
+  .services-image-block,
+  .services-provider-image-block,
+  .services-provider-text-block {
+    min-width: 100%;
+  }
+
+  .services-provider-heading {
+    font-size: 1.5rem;
+  }
+
+  .services-paragraph,
+  .services-provider-paragraph {
+    font-size: 1rem;
+  }
+
+  .services-provider-content {
+    padding-right: 0;
+  }
+
+  .slider-controls {
+    padding: 0 0.5rem;
+  }
+
+  .slider-button {
+    width: 40px;
+    height: 40px;
+  }
+  .services-text-block{
+      padding: 0.5rem;
+  }
+    .services-provider-text-block {
+                padding: 0rem;
+        border-radius: 14px;
+      }
+      .services-provider-section {
+    position: relative;
+    padding: 1rem 0;
+}
+
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+     
+}
+
+.services-text-block,
+.services-image-block,
+.services-provider-image-block,
+.services-provider-text-block {
+  animation: fadeInUp 0.8s ease-out;
+}

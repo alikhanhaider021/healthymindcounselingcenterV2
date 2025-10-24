@@ -444,11 +444,11 @@
 
         @media (max-width: 768px) {
           .poc-section {
-            padding: 3rem 0;
+            padding: 1rem 0;
           }
 
           .poc-content-wrapper {
-            gap: 2rem;
+            gap: 1rem;
           }
 
           .poc-heading {
@@ -478,6 +478,25 @@
           .poc-image-container,
           .poc-text-container {
             max-width: 100%;
+          }
+          .poc-container {
+        padding: 0 0rem;
+          }
+          .poc-text-container {
+          padding: 0 0rem;
+          }
+          .poc-text-wrapper {
+    padding: 0 0.7rem;
+          }
+          .poc-image-container {
+    padding: 0 0.6rem;
+          }
+          .poc-badge {
+    display: inline-flex
+;
+    align-items: center;
+  
+    margin-bottom: 0.3rem;
           }
         }
 

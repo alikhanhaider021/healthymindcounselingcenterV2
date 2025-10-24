@@ -1,217 +1,374 @@
-        .CardTable-container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding-top: 20px;
-        }
 
-        .CardTable-wrapper {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          border-radius: 24px;
-          padding: 3px;
-          box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
-          animation: CardTable-shimmer 3s infinite;
-        }
+/* ----------------- CardTable.css (final updated) ----------------- */
 
-        @keyframes CardTable-shimmer {
-          0%, 100% { box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4); }
-          50% { box-shadow: 0 20px 80px rgba(118, 75, 162, 0.5); }
-        }
+.CardTable-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
 
-        .CardTable-inner {
-          background: white;
-          border-radius: 22px;
-          overflow: hidden;
-        }
+/* Outer gradient wrapper */
+.CardTable-wrapper {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 24px;
+  padding: 3px;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+  animation: CardTable-shimmer 3s infinite;
+}
 
-        .CardTable-header {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          padding: 32px;
-          text-align: center;
-          position: relative;
-          overflow: hidden;
-        }
+@keyframes CardTable-shimmer {
+  0%, 100% { box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4); }
+  50% { box-shadow: 0 20px 80px rgba(118, 75, 162, 0.5); }
+}
 
-        .CardTable-header::before {
-          content: '';
-          position: absolute;
-          top: -50%;
-          left: -50%;
-          width: 200%;
-          height: 200%;
-          background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-          animation: CardTable-rotate 10s linear infinite;
-        }
+.CardTable-inner {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+}
 
-        @keyframes CardTable-rotate {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
+.CardTable-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-        .CardTable-title {
-          font-size: 2.5rem;
-          font-weight: 800;
-          color: white;
-          margin: 0;
-          position: relative;
-          z-index: 1;
-          text-shadow: 0 4px 12px rgba(0,0,0,0.2);
-          letter-spacing: -0.5px;
-        }
+.CardTable-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: CardTable-rotate 10s linear infinite;
+}
 
-        .CardTable-icon {
-          display: inline-block;
-          margin-right: 12px;
-          animation: CardTable-pulse 2s ease-in-out infinite;
-        }
+@keyframes CardTable-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
-        @keyframes CardTable-pulse {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.1); }
-        }
+.CardTable-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  letter-spacing: -0.5px;
+}
 
-        .CardTable-table {
-          width: 100%;
-          border-collapse: separate;
-          border-spacing: 0;
-        }
+.CardTable-icon {
+  display: inline-block;
+  margin-right: 12px;
+  animation: CardTable-pulse 2s ease-in-out infinite;
+}
 
-        .CardTable-thead {
-          background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
-        }
+@keyframes CardTable-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
 
-        .CardTable-th {
-          padding: 20px 24px;
-          text-align: left;
-          font-weight: 700;
-          font-size: 0.875rem;
-          color: #4a5568;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          border-bottom: 3px solid #667eea;
-        }
+.CardTable-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  -webkit-overflow-scrolling: touch;
+}
 
-        .CardTable-tbody {
-          background: white;
-        }
+.CardTable-thead {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+}
 
-        .CardTable-row {
-          transition: all 0.3s ease;
-          border-bottom: 1px solid #e2e8f0;
-        }
+.CardTable-th {
+  padding: 20px 24px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #667eea;
+}
 
-        .CardTable-row:hover {
-          background: linear-gradient(90deg, #f7fafc 0%, #edf2f7 100%);
-          transform: translateX(8px);
-          box-shadow: -4px 0 0 #667eea;
-        }
+.CardTable-tbody {
+  background: white;
+}
 
-        .CardTable-row:last-child {
-          border-bottom: none;
-        }
+.CardTable-row {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #e2e8f0;
+}
 
-        .CardTable-td {
-          padding: 24px;
-          font-size: 1rem;
-          color: #2d3748;
-        }
+.CardTable-row:hover {
+  background: linear-gradient(90deg, #f7fafc 0%, #edf2f7 100%);
+  transform: translateX(8px);
+  box-shadow: -4px 0 0 #667eea;
+}
 
-        .CardTable-day {
-          font-weight: 700;
-          font-size: 1.125rem;
-          color: #1a202c;
-          display: flex;
-          align-items: center;
-        }
+.CardTable-row:last-child {
+  border-bottom: none;
+}
 
-        .CardTable-day-number {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 36px;
-          height: 36px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
-          font-size: 0.875rem;
-          font-weight: 700;
-          margin-right: 12px;
-          box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-        }
+.CardTable-td {
+  padding: 24px;
+  font-size: 1rem;
+  color: #2d3748;
+}
 
-        .CardTable-status {
-          display: inline-flex;
-          align-items: center;
-          padding: 8px 16px;
-          border-radius: 12px;
-          font-weight: 600;
-          font-size: 0.875rem;
-          transition: all 0.3s ease;
-        }
+.CardTable-day {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #1a202c;
+  display: flex;
+  align-items: center;
+}
 
-        .CardTable-status-open {
-          background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-          color: white;
-          box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-        }
+.CardTable-day-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-right: 12px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
 
-        .CardTable-status-closed {
-          background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-          color: white;
-          box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
-        }
+.CardTable-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
 
-        .CardTable-status:hover {
-          transform: scale(1.05);
-        }
+.CardTable-status-open {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
 
-        .CardTable-time {
-          font-weight: 600;
-          color: #4a5568;
-          background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-          padding: 10px 20px;
-          border-radius: 8px;
-          display: inline-block;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
+.CardTable-status-closed {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
 
-        .CardTable-time-closed {
-          color: #cbd5e0;
-          background: #f7fafc;
-          font-weight: 400;
-        }
+.CardTable-status:hover {
+  transform: scale(1.05);
+}
 
-        .CardTable-icon-wrapper {
-          margin-right: 8px;
-          display: inline-flex;
-          animation: CardTable-bounce 2s ease-in-out infinite;
-        }
+.CardTable-time {
+  font-weight: 600;
+  color: #4a5568;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
 
-        @keyframes CardTable-bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-4px); }
-        }
+.CardTable-time-closed {
+  color: #cbd5e0;
+  background: #f7fafc;
+  font-weight: 400;
+}
 
-        @media (max-width: 768px) {
-          .CardTable-title {
-            font-size: 1.75rem;
-          }
-          
-          .CardTable-th {
-            padding: 16px 12px;
-            font-size: 0.75rem;
-          }
-          
-          .CardTable-td {
-            padding: 16px 12px;
-            font-size: 0.875rem;
-          }
-          
-          .CardTable-day {
-            font-size: 1rem;
-          }
-          
-          .CardTable-row:hover {
-            transform: translateX(4px);
-          }
-        }
-      
+.CardTable-icon-wrapper {
+  margin-right: 8px;
+  display: inline-flex;
+  animation: CardTable-bounce 2s ease-in-out infinite;
+}
+
+@keyframes CardTable-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* ---------------- Responsive rules ---------------- */
+
+/* Default adjustments for screens <= 1024px to keep layout balanced */
+@media (max-width: 1024px) {
+  .CardTable-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .CardTable-title {
+    font-size: 2rem;
+  }
+
+  .CardTable-th {
+    padding: 16px 18px;
+  }
+
+  .CardTable-td {
+    padding: 18px;
+  }
+}
+
+/* MOBILE: stacked card view so every row shows Day, Status, Opening, Closing clearly */
+@media (max-width: 768px) {
+
+  /* container full width */
+  .CardTable-container {
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+
+  /* hide the table header to avoid duplication; labels will be displayed per cell */
+  .CardTable-thead {
+    display: none;
+  }
+
+  /* make tbody and rows block so each row becomes a card */
+  .CardTable-table,
+  .CardTable-tbody,
+  .CardTable-row {
+    display: block;
+    width: 100%;
+  }
+
+  .CardTable-row {
+    background: white;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 20px rgba(16,24,40,0.06);
+    border: 1px solid rgba(226,232,240,0.6);
+    transform: none !important;
+  }
+
+  /* each cell becomes a horizontal flex line: label (left) + value (right) */
+  .CardTable-td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    color: #2d3748;
+    border-bottom: 1px dashed rgba(226,232,240,0.8);
+    background: transparent;
+  }
+
+  /* remove last cell's bottom border inside a card */
+  .CardTable-row .CardTable-td:last-child {
+    border-bottom: none;
+  }
+
+  /* show the label using the data-label attribute (requires data-label in JSX) */
+  .CardTable-td::before {
+    content: attr(data-label) ":";
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: #4a5568;
+    margin-right: 8px;
+    flex: 0 0 auto;
+  }
+
+  /* style for the left part (label + day-number + day text) — keep previous visuals */
+  .CardTable-day {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1a202c;
+  }
+
+  .CardTable-day-number {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+    margin-right: 8px;
+  }
+
+  /* align the value part to right */
+  .CardTable-td > *:not(.CardTable-day) {
+    margin-left: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  /* Status pill smaller on mobile */
+  .CardTable-status {
+    padding: 6px 10px;
+    font-size: 0.82rem;
+    border-radius: 10px;
+  }
+
+  .CardTable-time {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  /* shrink title */
+  .CardTable-title {
+    font-size: 1.5rem;
+  }
+
+  /* Remove floating/animated icon bounce on small screens to keep surfaces calm */
+  .CardTable-icon-wrapper {
+    animation: none;
+  }
+
+  .CardTable-row:hover {
+    transform: none;
+    box-shadow: 0 8px 26px rgba(102,126,234,0.08);
+  }
+}
+
+/* Extra small screens adjustments (<420px) keep stacked layout but little smaller sizes */
+@media (max-width: 420px) {
+  .CardTable-row {
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+
+  .CardTable-td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .CardTable-td::before {
+    font-size: 0.78rem;
+  }
+
+  .CardTable-day-number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.78rem;
+  }
+
+  .CardTable-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* Optional subtle scrollbar for desktop/tablet wide containers */
+.CardTable-container::-webkit-scrollbar {
+  height: 7px;
+}
+
+.CardTable-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(102,126,234,0.4), rgba(118,75,162,0.4));
+  border-radius: 10px;
+}
+
+/* ---------- End of file ---------- */
